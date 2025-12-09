@@ -1,668 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Areas - EV Expo</title>
 
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
-  <!-- About Us Section Starts -->
-  <section class="about pb-10 pt-11">
-    <div class="container">
-      <div class="about-inner pt-11">
-        <div class="row align-items-center gy-5 gx-xl-5">
-          <div class="col-xl-2 col-md-6 order-3 order-xl-1">
-            <div class="about-counter text-center">
-              <div class="counter-box mb-6 pb-6 border-bottom border-1 border-grey1">
-                <h2 class="green"><span class="num" data-val="20"></span>+</h2>
-                <span class="text-uppercase black fw-medium">Years Experience</span>
-              </div>
-              <div class="counter-box mb-6 pb-6 border-bottom border-1 border-grey1">
-                <h2 class="green"><span class="num" data-val="80"></span>+</h2>
-                <span class="text-uppercase black fw-medium">Service Stations</span>
-              </div>
-              <div class="counter-box mb-6 pb-6 border-bottom border-1 border-grey1">
-                <h2 class="green"><span class="num" data-val="15"></span>K+</h2>
-                <span class="text-uppercase black fw-medium">Positive Reviews</span>
-              </div>
-              <div class="counter-box">
-                <h2 class="green"><span class="num" data-val="20"></span>K+</h2>
-                <span class="text-uppercase black fw-medium">Happy Customers</span>
-              </div>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 34px;
+            margin-bottom: 30px;
+            color: #111;
+            font-weight: 800;
+        }
+
+        .focus-grid {
+            max-width: 1300px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+        }
+
+        .focus-card {
+            position: relative;
+            height: 240px;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .focus-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.45s ease;
+        }
+
+        /* RIGHT → LEFT OVERLAY SLIDE */
+        .focus-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(135, 195, 50, 0.92);
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+
+            opacity: 0;
+            transform: translateX(100%);
+            transition: 0.5s ease;
+        }
+
+        .focus-card:hover .focus-overlay {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .focus-overlay h3,
+        .focus-overlay p {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: 0.5s ease;
+        }
+
+        .focus-card:hover .focus-overlay h3,
+        .focus-card:hover .focus-overlay p {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .focus-overlay h3 {
+            margin-bottom: 8px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .focus-overlay p {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .focus-card:hover img {
+            transform: scale(1.1);
+            filter: brightness(0.45);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Focus Areas</h2>
+
+    <div class="focus-grid">
+
+        <!-- 1 -->
+        <div class="focus-card" data-aos="fade-up">
+            <img loading="lazy" src="https://img.freepik.com/premium-photo/electric-car-ev-charging-battery-charger-station_31965-98456.jpg?w=740&q=80">
+            <div class="focus-overlay">
+                <h3>EV & Hybrid Vehicles</h3>
+                <p>Cars, Bikes, Scooters, Buses & Commercial EVs.</p>
             </div>
-          </div>
-          <div class="col-xl-4 col-md-6 order-2">
-            <div class="about-image">
-              <img src="images/charging-an-electric-or-hybrid-phev-car-with-the-p-2022-01-29-11-17-07-utc.jpg" alt="about image" class="w-100 rounded2">
-            </div>
-          </div>
-          <div class="col-xl-6 order-1 order-xl-3">
-            <div class="about-info text-center text-xl-start">
-              <div class="section-title mb-6">
-                <h6 class="text-uppercase fw-medium green1 mb-1">About Evdrivex</h6>
-                <h2 class="ps-4 border-start border-3 border-green">Reliable solutions for all <span class="green">ev charging</span> programs!</h2>
-              </div>
-              <div class="section-body">
-                <p class="mb-4 pb-4 border-dashed border-top-0 border-2 border-start-0 border-end-0">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <div class="about-services mb-6">
-                  <div class="row g-0">
-                    <div class="col-md-6">
-                      <div class="about-service-box p-4 d-flex align-items-center bg-grey rounded2 rounded-bottom-0">
-                        <img src="images/PNG/car_eco.png" alt="service image" class="me-3">
-                        <a class="black text-capitalize fw-bold" href="">Spare part management</a>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="about-service-box p-4 d-flex align-items-center bg-white">
-                        <img src="images/PNG/car_with_flash.png" alt="service image" class="me-3">
-                        <a class="black text-capitalize fw-bold" href="">fast dc charging</a>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="about-service-box p-4 d-flex align-items-center bg-white">
-                        <img src="images/PNG/ecology.png" alt="service image" class="me-3">
-                        <a class="black text-capitalize fw-bold" href="">warrenty Extension</a>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="about-service-box p-4 d-flex align-items-center bg-grey rounded2 rounded-top-0">
-                        <img src="images/PNG/battery_plug.png" alt="service image" class="me-3">
-                        <a class="black text-capitalize fw-bold" href="">Preventive  maintenance</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <a href="about.html" class="btn btn2">More About</a>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+
+        <!-- 2 -->
+        <div class="focus-card" data-aos="fade-up" data-aos-delay="100">
+            <img loading="lazy" src="https://img.freepik.com/premium-photo/tricycle-motorcycle-isolated-white-background_1108736-1839.jpg?w=740&q=80">
+            <div class="focus-overlay">
+                <h3>Electric Mobility</h3>
+                <p>E-Rickshaws, Micro Mobility & Utility EVs.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="focus-card" data-aos="fade-up" data-aos-delay="200">
+            <img loading="lazy" src="https://img.freepik.com/free-photo/close-up-electric-car-france_23-2149169777.jpg?w=740&q=80">
+            <div class="focus-overlay">
+                <h3>Batteries & Energy Storage</h3>
+                <p>Cells, BMS, Battery Packs & Energy Storage.</p>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="focus-card" data-aos="fade-up" data-aos-delay="300">
+            <img loading="lazy" src="https://img.freepik.com/free-photo/young-woman-with-electric-car-charging-station-chisinau-moldova_1268-20619.jpg?w=740&q=80">
+            <div class="focus-overlay">
+                <h3>Charging Infrastructure</h3>
+                <p>Charging Stations, Fast Chargers & Power Systems.</p>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="focus-card" data-aos="fade-up" data-aos-delay="400">
+            <img loading="lazy" src="https://img.freepik.com/premium-photo/engineer-adjusting-robotic-painter-arm-auto-workshop_38013-28980.jpg?w=740&q=80">
+            <div class="focus-overlay">
+                <h3>Components & Parts</h3>
+                <p>Motors, Sensors, Steering, Tyres & Wiring.</p>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="focus-card" data-aos="fade-up" data-aos-delay="500">
+            <img loading="lazy" src="https://img.freepik.com/premium-photo/driverless-car-interior-with-futuristic-dashboard-autonomous-control-system_31965-18052.jpg?w=740&q=80">
+            <div class="focus-overlay">
+                <h3>Software & Electronics</h3>
+                <p>IoT, AI, Automation, Diagnostics & Connectivity.</p>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="focus-card" data-aos="fade-up" data-aos-delay="600">
+            <img loading="lazy" src="https://img.freepik.com/free-photo/minsk-belarus-dec-15-2021-car-bodies-are-assembly-line-factory-production-cars-modern-automotive-industry_645730-813.jpg?w=740&q=80">
+            <div class="focus-overlay">
+                <h3>Manufacturing & Testing</h3>
+                <p>Factory Tools, Assembly Lines & Test Equipment.</p>
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="focus-card" data-aos="fade-up" data-aos-delay="700">
+            <img loading="lazy" src="https://img.freepik.com/free-photo/car-dealership-salesman-sitting-with-clients-table-giving-them-contract-sign_482257-124051.jpg?w=740&q=80">
+            <div class="focus-overlay">
+                <h3>Financial Ecosystem</h3>
+                <p>Banks, Investors, Startups & Dealer Networks.</p>
+            </div>
+        </div>
+
     </div>
-  </section>
-  <!-- About Us Section Ends -->
 
-  <!-- Why Us Section Starts -->
-  <section class="why-us pt-10 position-relative z-1">
-    <div class="overlay"></div>
-    <div class="container position-relative">
-      <div class="why-us-inner">
-        <div class="section-title mb-6 text-center text-md-start">
-          <div class="row align-items-center gx-md-5">
-            <div class="col-lg-7">
-              <div class="section-title-left">
-                <h6 class="text-uppercase fw-medium green1 mb-1">Why choose us</h6>
-                <h2 class="ps-4 border-start border-3 border-green">Best electric <span class="green">service provider</span> for the electric vehicle</h2>
-              </div>
-            </div>
-            <div class="col-md-5">
-              <div class="section-title-right">
-                <p class="mb-3">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <a href="service-list.html" class="btn btn2">More Services</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section-body">
-          <div class="row gy-5 align-items-end">
-            <div class="col-xl-8">
-              <div class="section-body-left pb-lg-5 mb-lg-5">
-                <div class="row gy-4 gx-md-4">
-                  <div class="col-md-6 d-flex">
-                    <div class="service-box d-flex align-items-center p-6 border border-2 bg-white border-lightgreen rounded2">
-                      <div class="service-icon me-4">
-                        <img src="images/PNG/filling_station.png" alt="service-icon">
-                      </div>
-                      <div class="service-info">
-                        <h4 class="mb-1"><a href="service-detail.html" class="black">Home Charging</a></h4>
-                        <p>Excepteur sint occaecat to a cupidatat non pro</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="service-box d-flex align-items-center p-6 border border-2 bg-white border-lightgreen rounded2">
-                      <div class="service-icon me-4">
-                        <img src="images/PNG/car_with_flash.png" alt="service-icon">
-                      </div>
-                      <div class="service-info">
-                        <h4 class="mb-1"><a href="service-detail.html" class="black">Renewable Energy</a></h4>
-                        <p>Excepteur sint occaecat to a cupidatat non pro</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="service-box d-flex align-items-center p-6 border border-2 bg-white border-lightgreen rounded2">
-                      <div class="service-icon me-4">
-                        <img src="images/PNG/car_eco.png" alt="service-icon">
-                      </div>
-                      <div class="service-info">
-                        <h4 class="mb-1"><a href="service-detail.html" class="black">EV Drivers</a></h4>
-                        <p>Excepteur sint occaecat to a cupidatat non pro</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="service-box d-flex align-items-center p-6 border border-2 bg-white border-lightgreen rounded2">
-                      <div class="service-icon me-4">
-                        <img src="images/PNG/accumulator.png" alt="service-icon">
-                      </div>
-                      <div class="service-info">
-                        <h4 class="mb-1"><a href="service-detail.html" class="black">AC Charger</a></h4>
-                        <p>Excepteur sint occaecat to a cupidatat non pro</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="service-box d-flex align-items-center p-6 border border-2 bg-white border-lightgreen rounded2">
-                      <div class="service-icon me-4">
-                        <img src="images/PNG/accumulator.png" alt="service-icon">
-                      </div>
-                      <div class="service-info">
-                        <h4 class="mb-1"><a href="service-detail.html" class="black">Datacable Battery</a></h4>
-                        <p>Excepteur sint occaecat to a cupidatat non pro</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 d-flex">
-                    <div class="service-box d-flex align-items-center p-6 border border-2 bg-white border-lightgreen rounded2">
-                      <div class="service-icon me-4">
-                        <img src="images/PNG/filling_station.png" alt="service-icon">
-                      </div>
-                      <div class="service-info">
-                        <h4 class="mb-1"><a href="service-detail.html" class="black">Building Services</a></h4>
-                        <p>Excepteur sint occaecat to a cupidatat non pro</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4">
-              <div class="section-body-right position-relative">
-                <div class="service-image text-center">
-                  <img src="images/img-charge.png" alt="service image" class="w-75">
-                </div>
-                <div class="ev-logo p-2 bg-white border border-3 border-grey1 rounded-circle text-center position-absolute">
-                  <img src="images/ev-logo-02.png" alt="ev logo">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Why Us Section Ends -->
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 900,
+            once: true
+        });
+    </script>
 
-  <!-- Work Section Starts -->
-  <section class="work pt-10 pb-8 bg-dark text-center text-white rounded3 rounded-start-0 position-relative">
-    <div class="overlay rounded3 rounded-start-0"></div>
-    <div class="container position-relative">
-      <div class="work-inner">
-        <div class="section-title mb-8">
-          <h6 class="text-uppercase fw-medium text-white mb-1">How we work</h6>
-          <h2 class="text-white">Professional <span class="green">EV Charging</span> solution for you</h2>
-        </div>
-        <div class="section-body">
-          <div class="row gy-5 gx-md-5">
-            <div class="col-xl-3 col-md-6">
-              <div class="work-box position-relative">
-                <div class="work-image mb-5">
-                  <img src="images/modern-electric-car-charging-at-outdoors-ev-statio-2023-03-17-23-18-45-utc.jpg" alt="work image" class="rounded-circle object-fit-cover">
-                </div>
-                <div class="work-info">
-                  <h4 class="mb-3 text-white">Fast Charging</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                </div>
-                <div class="work-box-number rounded-circle border border-3 border-lightgreen bg-green position-absolute">
-                  <h4 class="text-white">01.</h4>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-6">
-              <div class="work-box position-relative my-8">
-                <div class="work-image mb-5">
-                  <img src="images/hand-holding-electric-car-charger-electric-vehicl-2022-11-16-14-02-45-utc.jpg" alt="work image" class="rounded-circle object-fit-cover">
-                </div>
-                <div class="work-info">
-                  <h4 class="mb-3 text-white">Good Management</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                </div>
-                <div class="work-box-number rounded-circle border border-3 border-lightgreen bg-green position-absolute">
-                  <h4 class="text-white">02.</h4>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-6">
-              <div class="work-box position-relative">
-                <div class="work-image mb-5">
-                  <img src="images/indian-businessman-charging-car-at-outdoor-ev-stat-2023-03-17-23-18-50-utc.jpg" alt="work image" class="rounded-circle object-fit-cover">
-                </div>
-                <div class="work-info">
-                  <h4 class="mb-3 text-white">Renewable Energy</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                </div>
-                <div class="work-box-number rounded-circle border border-3 border-lightgreen bg-green position-absolute">
-                  <h4 class="text-white">03.</h4>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-md-6">
-              <div class="work-box position-relative my-8">
-                <div class="work-image mb-5">
-                  <img src="images/electric-car-charging-connected-to-the-grid-2023-02-07-21-01-15-utc.jpg" alt="work image" class="rounded-circle object-fit-cover">
-                </div>
-                <div class="work-info">
-                  <h4 class="mb-3 text-white">Quality Charger</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                </div>
-                <div class="work-box-number rounded-circle border border-3 border-lightgreen bg-green position-absolute">
-                  <h4 class="text-white">04.</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Work Section Ends -->
-
-  <!-- Mission Section Starts -->
-  <section class="mission py-10">
-    <div class="container">
-      <div class="mission-inner text-center text-lg-start border-dashed border-2 mb-7 pb-7 border-top-0 border-start-0 border-end-0">
-        <div class="row align-items-center gy-5 gx-lg-5">
-          <div class="col-lg-6">
-            <div class="section-left">
-              <img src="images/map-evcharge.png" alt="mission image" class="w-100">
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="section-right">
-              <div class="section-title mb-6">
-                <h6 class="text-uppercase fw-medium green1 mb-1">Convenient & fast</h6>
-                <h2 class="ps-4 border-start border-3 border-green"><span class="green">our mission</span> is to charge your electric vehicle properly</h2>
-              </div>
-              <div class="section-body">
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <ul class="list-unstyled mission-list fw-bold mt-4 pt-4 border-dashed border-2 border-bottom-0 border-start-0 border-end-0">
-                  <li class="mb-3"><i class="fa fa-leaf green me-1" aria-hidden="true"></i> Duis aute irure dolor in reprehenderit in voluptate</li>
-                  <li class="mb-3"><i class="fa fa-leaf green me-1" aria-hidden="true"></i> Excepteur sint occaecat cupidatat non proident, sunt in culpa</li>
-                  <li><i class="fa fa-leaf green me-1" aria-hidden="true"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit</li> 
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="partner">
-        <div class="row align-items-center gy-5">
-          <div class="col-lg-2">
-            <div class="section-title text-center text-lg-start">
-              <h3 class="ps-4 border-start border-3 border-green">Our<span class="green"> partners</span></h3>
-            </div>
-          </div>
-          <div class="col-lg-10">
-            <div class="partner-slider border-start border-1 border-grey2">
-              <div class="slide  d-flex justify-content-center">
-                <img src="images/1.png" alt="partner image">
-              </div>
-              <div class="slide d-flex justify-content-center">
-                <img src="images/2.png" alt="partner image">
-              </div>
-              <div class="slide d-flex justify-content-center">
-                <img src="images/3.png" alt="partner image">
-              </div>
-              <div class="slide d-flex justify-content-center">
-                <img src="images/4.png" alt="partner image">
-              </div>
-              <div class="slide d-flex justify-content-center">
-                <img src="images/5.png" alt="partner image">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Mission Section Ends -->
-
-  <!-- More About Section Starts -->
-  <section class="more-about pt-10 rounded3 position-relative z-1">
-    <div class="container">
-      <div class="more-about-inner pb-10 px-2 text-center text-xl-start">
-        <div class="row gx-xl-5 gy-5">
-          <div class="col-xl-7">
-            <div class="section-left">
-              <div class="section-title mb-6">
-                <h6 class="text-uppercase fw-medium green1 mb-1">Who we are</h6>
-                <h2 class="ps-4 border-start border-3 border-green mb-4 text-white">create an ultimate world of <span class="green">EV generations</span></h2>
-                <a href="about.html" class="btn btn2">Discover More</a>
-              </div>
-              <div class="about-video-wrapper position-relative">
-                <img src="images/modern-electric-car-charging-at-outdoors-ev-statio-2023-03-17-23-18-45-utc.jpg" alt="video thumbnail" class="w-100 rounded2">
-                <div class="about-video position-absolute top-50 start-50 translate-middle">
-                  <div class="lightgallery-box position-relative" >
-                    <div class="promo-video">
-                      <div class="waves-block">
-                        <div class="waves wave-1 position-absolute rounded-circle z-n1"></div>
-                        <div class="waves wave-2 position-absolute rounded-circle z-n1"></div>
-                        <div class="waves wave-3 position-absolute rounded-circle z-n1"></div>
-                      </div>
-                    </div>
-                    <div id="lightgallery-video">
-                      <a data-src="https://youtu.be/VhBl3dHT5SY" class="about-video-play video-popup mfp-iframe bg-green rounded-circle text-center text-white d-inline-block ">
-                        <i class="fa fa-play" aria-hidden="true"></i>
-                      </a>
-                    </div>
-                  </div> 
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-5">
-            <div class="section-body text-white position-relative">
-              <p class="mb-4">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <p class="mb-7">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <div class="service-list mb-8">
-                <div class="service-progress-list mb-4 pb-3 border-dashed border-2 border-top-0 border-start-0 border-end-0">
-                  <Span class="fw-bold">Eco-friendly Charging</Span>
-                  <div class="progress-bar-section">
-                    <div class="progress bg-darkgreen position-relative overflow-visible mt-2" 
-                          role="progressbar" aria-label="Basic example" 
-                          aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" 
-                          style="height: 15px">
-                      
-                      <div class="progress-bar rounded-start-2 bg-green position-relative overflow-visible" 
-                            style="width: 90%">
-                        
-                        <div class="percentage-wrapper position-absolute p-2 bg-green d-flex align-items-center justify-content-between rounded-circle">
-                          <span class="progress-num" data-val="90">0</span><span>%</span>
-                        </div>
-                  
-                      </div>
-                    </div>
-                  </div>                   
-                </div>
-                <div class="service-progress-list mb-4 pb-3 border-dashed border-2 border-top-0 border-start-0 border-end-0">
-                  <Span class="fw-bold">Energy Storage Systems</Span>
-                  <div class="progress-bar-section">
-                    <div class="progress bg-darkgreen position-relative overflow-visible mt-2" 
-                          role="progressbar" aria-label="Basic example" 
-                          aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" 
-                          style="height: 15px">
-                      
-                      <div class="progress-bar rounded-start-2 bg-green position-relative overflow-visible" 
-                            style="width: 85%">
-                        
-                        <div class="percentage-wrapper position-absolute p-2 bg-green d-flex align-items-center justify-content-between rounded-circle">
-                          <span class="progress-num" data-val="85">0</span><span>%</span>
-                        </div>
-                  
-                      </div>
-                    </div>
-                  </div>                   
-                </div>
-                <div class="service-progress-list">
-                  <Span class="fw-bold">EV Drivers Services</Span>
-                  <div class="progress-bar-section">
-                    <div class="progress bg-darkgreen position-relative overflow-visible mt-2" 
-                          role="progressbar" aria-label="Basic example" 
-                          aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" 
-                          style="height: 15px">
-                      
-                      <div class="progress-bar rounded-start-2 bg-green position-relative overflow-visible" 
-                            style="width: 89%">
-
-                        <div class="percentage-wrapper position-absolute p-2 bg-green d-flex align-items-center justify-content-between rounded-circle">
-                          <span class="progress-num" data-val="89">0</span><span>%</span>
-                        </div>
-                  
-                      </div>
-                    </div>
-                  </div>                   
-                </div>
-              </div>
-              <div class="more-about-quote px-4 py-6 bg-green1 rounded2">
-                <div class="quote-inner ps-4 border-start border-3 border-white">
-                  <p class="mb-2">"Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"</p>
-                  <span class="h6 fw-bold">John Doe</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- More About Section Ends -->
-  
-  <!-- Client Review Section Starts -->  
-  <section class="review py-10 bg-lightgreen position-relative rounded-bottom-0 rounded3">
-    <div class="overlay"></div>
-    <div class="container position-relative">
-      <div class="review-inner pt-10 text-center text-lg-start">
-        <div class="row align-items-center gy-5 gx-lg-5">
-          <div class="col-lg-5">
-            <div class="section-left">
-              <div class="section-title mb-6">
-                <h6 class="text-uppercase fw-medium green1 mb-1">Client Reviews</h6>
-                <h2 class="ps-4 border-start border-3 border-green mb-4">Read Clients Story of <span class="green">electronic invention</span></h2>
-              </div>
-              <div class="section-body">
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p class="my-4">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <a href="testimonial.html" class="btn btn2">View all reviews</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-7">
-            <div class="section-right">
-              <div class="review-slider mb-4">
-                <div class="review-box mx-2 position-relative px-6 py-8 bg-white border-dashed border-2 rounded2">
-                  <div class="qoute-icon p-4 h2 bg-lightgreen1 position-absolute rounded2">
-                    <i><i class="fa fa-quote-right green" aria-hidden="true"></i></i>
-                  </div>
-                  <div class="review-info position-relative">
-                    <ul class="list-unstyled d-flex">
-                      <li class="me-1"><i class="fa fa-star black" aria-hidden="true"></i></li>
-                      <li class="me-1"><i class="fa fa-star black" aria-hidden="true"></i></li>
-                      <li class="me-1"><i class="fa fa-star black" aria-hidden="true"></i></li>
-                      <li class="me-1"><i class="fa fa-star black" aria-hidden="true"></i></li>
-                      <li><i class="fa fa-star black" aria-hidden="true"></i></li>
-                    </ul>
-                    <p class="h5 fw-normal fst-italic lh-base my-6">Duis aute irure dolor in repre hend in volu ptate velites mollit anim id. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
-                  </div>
-                  <div class="reviewer-bio d-flex align-items-center justify-content-center">
-                    <div class="bio-image me-3">
-                      <img src="images/review1.jpg" alt="review-image" class="rounded-circle object-fit-cover">
-                    </div>
-                    <div class="bio-detail">
-                      <span class="black text-uppercase fw-medium">Nelson Hiem</span> <br>
-                      <span class="green1">Director</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="review-box mx-2 position-relative px-6 py-8 bg-white border-dashed border-2 rounded2">
-                  <div class="qoute-icon p-4 h2 bg-lightgreen1 position-absolute rounded2">
-                    <i><i class="fa fa-quote-right green" aria-hidden="true"></i></i>
-                  </div>
-                  <div class="review-info position-relative">
-                    <ul class="list-unstyled d-flex">
-                      <li class="me-1"><i class="fa fa-star black" aria-hidden="true"></i></li>
-                      <li class="me-1"><i class="fa fa-star black" aria-hidden="true"></i></li>
-                      <li class="me-1"><i class="fa fa-star black" aria-hidden="true"></i></li>
-                      <li class="me-1"><i class="fa fa-star black" aria-hidden="true"></i></li>
-                      <li><i class="fa fa-star black" aria-hidden="true"></i></li>
-                    </ul>
-                    <p class="h5 fw-normal fst-italic lh-base my-6">Duis aute irure dolor in repre hend in volu ptate velites mollit anim id. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
-                  </div>
-                  <div class="reviewer-bio d-flex align-items-center justify-content-center">
-                    <div class="bio-image me-3">
-                      <img src="images/review2.jpg" alt="review-image" class="rounded-circle object-fit-cover">
-                    </div>
-                    <div class="bio-detail">
-                      <span class="black text-uppercase fw-medium">Sadar Jekson</span> <br>
-                      <span class="green1">Manager, Kelly Land</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="review-box mx-2 position-relative px-6 py-8 bg-white border-dashed border-2 rounded2">
-                  <div class="qoute-icon p-4 h2 bg-lightgreen1 position-absolute rounded2">
-                    <i><i class="fa fa-quote-right green" aria-hidden="true"></i></i>
-                  </div>
-                  <div class="review-info position-relative">
-                    <ul class="list-unstyled d-flex">
-                      <li class="me-1"><i class="fa fa-star black" aria-hidden="true"></i></li>
-                      <li class="me-1"><i class="fa fa-star black" aria-hidden="true"></i></li>
-                      <li class="me-1"><i class="fa fa-star black" aria-hidden="true"></i></li>
-                      <li class="me-1"><i class="fa fa-star black" aria-hidden="true"></i></li>
-                      <li><i class="fa fa-star black" aria-hidden="true"></i></li>
-                    </ul>
-                    <p class="h5 fw-normal fst-italic lh-base my-6">Duis aute irure dolor in repre hend in volu ptate velites mollit anim id. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
-                  </div>
-                  <div class="reviewer-bio d-flex align-items-center justify-content-center">
-                    <div class="bio-image me-3">
-                      <img src="images/review3.jpg" alt="review-image" class="rounded-circle object-fit-cover">
-                    </div>
-                    <div class="bio-detail">
-                      <span class="black text-uppercase fw-medium">Miley Houdson</span> <br>
-                      <span class="green1">CEO, Hudson</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="review-bottom d-flex align-items-center">
-                <ul class="list-unstyled d-flex me-3">
-                  <li><i class="fa fa-star green" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-star green" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-star green" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-star green" aria-hidden="true"></i></li>
-                  <li><i class="fa fa-star green" aria-hidden="true"></i></li>
-                </ul>
-                <p><span class="fw-bold">99.9% Customer Satisfaction</span> based on 550+ reviews of 2,250 Completed Projects, and 2,820 Happy Customers trust us.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Client Review Section Ends -->
-
-  <!-- Mobile App Section Starts -->
-  <section class="mobile-app pt-10 position-relative rounded3 rounded-top-0">
-    <div class="overlay rounded3 rounded-top-0"></div>
-    <div class="container position-relative">
-      <div class="mobile-app-inner text-white text-center text-xl-start">
-        <div class="row align-items-center gx-xl-5 gy-5">
-          <div class="col-xl-5 order-2 order-xl-1">
-            <div class="section-left">
-              <img src="images/mockup-ev.png" alt="app image" class="w-100">
-            </div>
-          </div>
-          <div class="col-xl-7 order-1 order-xl-2">
-            <div class="section-right mb-4">
-              <div class="section-title mb-6">
-                <h6 class="text-uppercase fw-medium green1 mb-1 text-white">Download evcharge app</h6>
-                <h2 class="ps-4 border-start border-3 border-green text-white">Find an available <span class="green">charging station</span> near you with our app</h2>
-              </div>
-              <div class="section-body text-white">
-                <p class="mb-4">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
-                <ul class="list-unstyled  download-btn d-md-flex justify-content-center justify-content-xl-start">
-                  <li class="mx-1 my-2"><a href="" class="btn btn1"><i class="fa fa-apple me-2" aria-hidden="true"></i> App store</a></li>
-                  <li class="mx-1 my-2 h6"><a href="" class="btn"><i class="fa fa-play me-2" aria-hidden="true"></i> Play Store</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div> 
-      </div>
-    </div>
-  </section>
-  <!-- Mobile App Section Ends -->
-
-  <!-- Blog Section Starts -->
-  <section class="blog pt-11 pb-10">
-    <div class="container">
-      <div class="blog-inner pt-8 text-center">
-        <div class="section-title mb-6 w-lg-50 w-md-75 m-auto">
-          <h6 class="text-uppercase fw-medium green1 mb-1 green1">Our Blogs</h6>
-          <h2>know more about the <span class="green">EVcharge Article</span></h2>
-        </div>
-        <div class="section-body  mb-6">
-          <div class="row gx-lg-5 gy-5">
-            <div class="col-xl-4">
-              <div class="blog-box border bg-white border-2 border-lightgreen rounded2 overflow-hidden">
-                <div class="blog-image position-relative">
-                  <a href="blog-detail.html"><img src="images/electric-car-charging-connected-to-the-grid-2023-02-07-21-01-15-utc.jpg" alt="blog-image" class="w-100"></a>
-                </div>
-                <div class="blog-info px-6 pt-6">
-                  <h4><a href="blog-detail.html" class="black">Business benifits from EV management software</a></h4>
-                  <p class="py-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                </div>
-                <div class="blog-data py-3 border-top border-1 border-grey2 px-6">
-                  <span class="small">January 10, 2025 <span class="mx-2"> | </span> 1 Comment</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 col-md-6">
-              <div class="blog-box border bg-white border-2 border-lightgreen rounded2 overflow-hidden">
-                <div class="blog-image position-relative">
-                  <a href="blog-detail.html"><img src="images/rearview-car-parked-in-luxury-showroom-car-dealer-2023-03-30-01-57-28-utc.JPG" alt="blog-image" class="w-100"></a>
-                </div>
-                <div class="blog-info px-6 pt-6">
-                  <h4><a href="blog-detail.html" class="black">Solar Cells for Electric Charge on Sale</a></h4>
-                  <p class="py-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                </div>
-                <div class="blog-data py-3 border-top border-1 border-grey2 px-6">
-                  <span class="small">January 10, 2025 <span class="mx-2"> | </span> 1 Comment</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 col-md-6 d-flex">
-              <div class="blog-box border bg-white border-2 border-lightgreen rounded2 overflow-hidden">
-                <div class="blog-image position-relative">
-                  <a href="blog-detail.html"><img src="images/hand-holding-electric-car-charger-electric-vehicl-2022-11-16-14-02-45-utc.jpg" alt="blog-image" class="w-100"></a>
-                </div>
-                <div class="blog-info px-6 pt-6">
-                  <h4><a href="blog-detail.html" class="black">Auto Dealership Needs EV Charging Stations</a></h4>
-                  <p class="py-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                </div>
-                <div class="blog-data py-3 border-top border-1 border-grey2 px-6">
-                  <span class="small">January 10, 2025 <span class="mx-2"> | </span> 1 Comment</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section-btn">
-          <a href="blog-list.html" class="btn btn2">View all blog</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Blog Section Ends -->
-
-  <!-- Newsletter Section Starts -->
-   <section class="newsletter text-white z-1 position-relative">
-    <div class="container">
-      <div class="newsletter-inner p-6 bg-green1 rounded2 text-center text-md-start">
-        <div class="row gx-xl-5 gy-4 align-items-center">
-          <div class="col-xl-5">
-            <div class="section-title">
-              <h6 class="text-uppercase fw-medium mb-1 text-white">Subscribe Newsletter</h6>
-              <h3 class="text-white">Don't miss our future updates! Get subscribed today!</h3>
-            </div>
-          </div>
-          <div class="col-xl-7">
-            <div class="section-body">
-              <p class="mb-3">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporatu incididunt ut labore et dolore magna aliqua.”</p>
-              <div class="search-bar d-md-flex">
-                <input type="text" placeholder="Search..." class="w-100 mx-1"><a href="" class="btn btn3 mx-1">subscribe</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-   </section>
-  <!-- Newsletter Section Starts -->
-
-
-
+</body>
+</html>
