@@ -4,7 +4,12 @@
 * URL:            https://themeforest.net/user/htmldesigntemplates
 * Created:        04/04/2025
 -------------------------------------------------------------------*/
+body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 
+}
 /* Header CSS */
 .header-top-left ul li:first-child::after{
   content: '';

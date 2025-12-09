@@ -1,10 +1,11 @@
 body {
+      --primary-color: #0b2e13;
+    --accent-color: #22a447;
+    --text-color: white;
     font-family: 'Poppins', sans-serif;
     background: #f4fff7;
     overflow-x: hidden;
-    --primary-color: #0b2e13;
-    --accent-color: #22a447;
-    --text-color: white;
+
     margin: 0;
     padding: 0;
 }
