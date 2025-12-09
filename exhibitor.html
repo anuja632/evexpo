@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About-evcharge</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/ev-logo-02.png">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./assets/css/boostrap.css">
+
+  <!--CSS Plugins-->
+  <link rel="stylesheet" href="/assets/css/plugin.css">
+  <!-- Default CSS-->
+  <link rel="stylesheet" href="./assets/css/default.css">
+  <!--Custom CSS-->
+  <link rel="stylesheet" href="./assets/css/styles.css">
+
+  <!--FontAwesome CSS-->
+  <link rel="stylesheet" href="icons/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+<style>
+  :root{
+    --card-bg:#0f1a24;
+    --card-accent:#f7941d;
+    --panel-top:#ffffff;
+    --gutter:28px;
+    --max-width:1200px;
+  }
+
+  *{ box-sizing:border-box; }
+
+/* Banner */
+.banner {
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('https://html.designingmedia.com/energox/assets/images/banner-rightbackground.jpg') center/cover no-repeat;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner h1 {
+    color: white;
+    font-size: 54px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+}
+
+
+
+  /* GRID */
+  .wrap{
+    max-width:var(--max-width);
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+  }
+
+  /* CARD */
+  .ex-card{
+    background: linear-gradient(180deg, #fff 0%, #fafafa 100%);
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 18px 40px rgba(15,20,28,0.08);
+    display:flex;
+    flex-direction:column;
+    min-height:620px;
+    border:1px solid rgba(0,0,0,0.04);
+
+    /* fade-up animation */
+    opacity:0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease forwards;
+  }
+
+  /* hover animation */
+  .ex-card:hover{
+    transform: translateY(-10px) scale(1.02);
+    box-shadow:0 28px 60px rgba(0,0,0,0.18);
+    border-color: var(--card-accent);
+    transition:0.35s ease-in-out;
+  }
+
+  @keyframes fadeUp {
+    to{
+      opacity:1;
+      transform: translateY(0px);
+    }
+  }
+
+  /* top media */
+  .ex-card .top-media{
+    background:var(--panel-top);
+    /* padding:34px 28px; */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:200px;
+  }
+  .ex-card .top-media img{
+    max-width:100%;
+  }
+
+  /* content */
+  .ex-card .content{
+    background:var(--card-bg);
+    padding:36px;
+    flex:1;
+  }
+  .ex-card h3{
+    font-size:24px;
+    color:#ffffff;
+    margin:0 0 20px;
+    font-weight:700;
+    text-align:center;
+  }
+
+  
+  /* LIST */
+  .ex-card ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+  }
+
+  .ex-card li{
+    color:#d7dbe0;
+    padding:10px 0 10px 34px;
+    font-size:15px;
+    font-weight:500;
+    position:relative;
+  }
+
+  .ex-card li i{
+    color:var(--card-accent);
+    font-size:14px;
+    position:absolute;
+    left:8px;
+    top:50%;
+    transform:translateY(-50%);
+  }
+
+  /* hover on list item */
+  .ex-card li:hover{
+    color:#ffffff;
+    transition:0.25s;
+    padding-left:40px;
+  }
+
+  /* responsive */
+  @media(max-width:1024px){
+    .wrap{ grid-template-columns:repeat(2,1fr); }
+  }
+  @media(max-width:720px){
+    body{ margin:18px; }
+    .wrap{ grid-template-columns:1fr; }
+    .ex-card h3{ font-size:22px; }
+  }
+</style>
+</head>
+<body>
+    <!-- Preloader -->
+  <div id="preloader">
+    <img src="https://st.ourhtmldemo.com/new/mechanic_hub/images/icon/preloader.gif" alt="Loading..." />
+  </div>
+
+  <!-- Header Section Starts -->
+  <header class="position-relative z-2">
+
+<div class="header-nav-menu" id="header-nav-menu">
+  <div class="container">
+    <div class="header-nav-menu-inner py-4">
+      <div class="row align-items-center justify-content-between">
+        
+        <!-- Logo -->
+        <div class="col-xl-2 col-md-3 col-5">
+          <div class="navbar-logo m-0">
+            <a href="index.html"><img src="images/ev-logo-04.png" alt="Logo" class="w-100"></a>
+          </div>
+        </div>
+
+        <!-- Navbar -->
+        <div class="col-lg-7">
+          <div class="navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="navbar-nav align-items-center justify-content-end flex-row" id="responsive-menu">
+
+              <li class="nav-item">
+                <a class="nav-link px-3 py-0 white text-uppercase fw-medium" href="index.html">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active px-3 py-0 white text-uppercase fw-medium" href="about.html">About</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle px-3 py-0 white text-uppercase fw-medium" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Exhibitor
+                </a>
+                <ul class="dropdown-menu bg-grey p-0 rounded1 bg-off-white border-0">
+                  <li><a class="dropdown-item py-2 px-7 dark-grey border-0" href="exhibitor.html">Exhibitor</a></li>
+                  <li><a class="dropdown-item py-2 px-7 dark-grey border-0" href="brochure.html">Brochure</a></li>
+                  <li><a class="dropdown-item py-2 px-7 dark-grey border-0" href="floor-plan.html">Floor Plan</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link px-3 py-0 white text-uppercase fw-medium" href="visitor.html">Visitor</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link px-3 py-0 white text-uppercase fw-medium" href="sponsorship.html">Sponsorship</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link px-3 py-0 white text-uppercase fw-medium" href="gallery.html">Gallery</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link px-3 py-0 white text-uppercase fw-medium" href="contact.html">Contact</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+        <!-- Get a Quote Button -->
+        <div class="col-lg-3 text-end">
+               <a class="ev-btn" href="contact.html">
+  Get a Quote
+
+
+  <div class="star-2">
+    <svg viewBox="0 0 784.11 815.53">
+      <path class="fil0"
+       d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 
+        371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 
+        392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"/>
+    </svg>
+  </div>
+
+  <div class="star-3">
+    <svg viewBox="0 0 784.11 815.53">
+      <path class="fil0"
+       d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 
+        371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 
+        392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"/>
+    </svg>
+  </div>
+
+  <div class="star-4">
+    <svg viewBox="0 0 784.11 815.53">
+      <path class="fil0"
+       d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 
+        371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 
+        392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"/>
+    </svg>
+  </div>
+
+  
+
+ 
+</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </header>
+  <!-- Header Section Ends -->
+
+
+  <!-- Banner -->
+<div class="banner">
+  <h1 data-aos="fade-up">Exhibitor</h1>
+</div>
+
+
+<div class="wrap mt-5" role="list">
+
+  <!-- 1️⃣ Electric Vehicle & Hybrid Technology -->
+  <article class="ex-card">
+    <div class="top-media">
+      <img src="https://img.freepik.com/premium-photo/two-electric-kick-scooters-e-scooter-parked-sidelines-road_926199-2393970.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80">
+    </div>
+    <div class="content">
+      <h3>Electric Vehicle & Hybrid Technology</h3>
+      <ul>
+        <li><i class="fa-solid fa-bolt"></i> Electric Cars, Bikes, Scooters, Tractors & Commercial Vehicles</li>
+        <li><i class="fa-solid fa-truck"></i> Electric Rickshaws, Tricycles, Buses & Trucks</li>
+        <li><i class="fa-solid fa-car-side"></i> Hybrid Vehicles & Hybrid Manufacturers</li>
+        <li><i class="fa-solid fa-ship"></i> Electric Boats, Golf Carts & Utility Vehicles</li>
+        <li><i class="fa-solid fa-bicycle"></i> Battery Operated Vehicles & Micro Mobility Solutions</li>
+      </ul>
+    </div>
+  </article>
+
+
+  <!-- 2️⃣ Battery, Charging & Energy Storage -->
+  <article class="ex-card">
+    <div class="top-media">
+      <img src="https://img.freepik.com/premium-photo/eletric-car-charging-station-with-solar-panel-top_976492-62110.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80">
+    </div>
+    <div class="content">
+      <h3>Battery, Charging & Energy Storage</h3>
+      <ul>
+        <li><i class="fa-solid fa-battery-full"></i> EV Batteries & Cell Manufacturers</li>
+        <li><i class="fa-solid fa-microchip"></i> Battery Packs, BMS, Materials & Components</li>
+        <li><i class="fa-solid fa-cubes"></i> Battery Pack Assemblers & Integrators</li>
+        <li><i class="fa-solid fa-box-open"></i> Battery Storage Systems</li>
+        <li><i class="fa-solid fa-charging-station"></i> Charging Stations Manufacturers</li>
+        <li><i class="fa-solid fa-bolt"></i> Fast & Smart Charging Infrastructure</li>
+        <li><i class="fa-solid fa-solar-panel"></i> Power Infrastructure & Renewable Energy Systems</li>
+      </ul>
+    </div>
+  </article>
+
+
+  <!-- 3️⃣ Components, Parts & Systems -->
+  <article class="ex-card">
+    <div class="top-media">
+      <img src="https://img.freepik.com/premium-photo/electric-car-engine-closeup_1261393-6816.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80">
+    </div>
+    <div class="content">
+      <h3>Components, Parts & Systems</h3>
+      <ul>
+        <li><i class="fa-solid fa-gears"></i> EV Auto & Engine Components</li>
+        <li><i class="fa-solid fa-circle-nodes"></i> Powertrain, Drivetrain, Transmission & Steering</li>
+        <li><i class="fa-solid fa-fan"></i> Suspension, Braking & Cooling Systems</li>
+        <li><i class="fa-solid fa-sitemap"></i> Sensors, Magnetics, Cables & Connectors</li>
+        <li><i class="fa-solid fa-gem"></i> Rubber Parts, Tyres & Wheels</li>
+        <li><i class="fa-solid fa-cube"></i> Metal & Plastic Components</li>
+        <li><i class="fa-solid fa-bars"></i> Consumables & Raw Materials</li>
+      </ul>
+    </div>
+  </article>
+
+
+  <!-- 4️⃣ Technology, Software & Automation -->
+  <article class="ex-card">
+    <div class="top-media">
+      <img src="https://img.freepik.com/premium-photo/young-confident-handsome-car-mechanic-with-laptop-hand-conducts-computer-diagnostics-errors-car-systems_283617-4598.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80">
+    </div>
+    <div class="content">
+      <h3>Technology, Software & Automation</h3>
+      <ul>
+        <li><i class="fa-solid fa-microchip"></i> EV Software, IoT & Smart Systems</li>
+        <li><i class="fa-solid fa-stethoscope"></i> Vehicle Diagnostics & Fleet Management</li>
+        <li><i class="fa-solid fa-plug"></i> Automotive Electronics & Embedded</li>
+        <li><i class="fa-solid fa-robot"></i> Automation, AI & Industry 4.0 Solutions</li>
+        <li><i class="fa-solid fa-flask-vial"></i> Engineering Consultancy & Research Institutions</li>
+      </ul>
+    </div>
+  </article>
+
+
+  <!-- 5️⃣ Manufacturing, Testing & Machinery -->
+  <article class="ex-card">
+    <div class="top-media">
+      <img src="https://img.freepik.com/free-photo/minsk-belarus-dec-15-2021-car-bodies-are-assembly-line-factory-production-cars-modern-automotive-industry-electric-car-factory-conveyor_645730-794.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80">
+    </div>
+    <div class="content">
+      <h3>Manufacturing, Testing & Machinery</h3>
+      <ul>
+        <li><i class="fa-solid fa-industry"></i> Manufacturing Equipment & Assembly Solutions</li>
+        <li><i class="fa-solid fa-vial"></i> Lab Rotary & Testing Equipment</li>
+        <li><i class="fa-solid fa-plug-circle-bolt"></i> Power Generation & Supporting Systems</li>
+        <li><i class="fa-solid fa-toolbox"></i> Charging Equipment & EV Infrastructure Machinery</li>
+      </ul>
+    </div>
+  </article>
+
+
+  <!-- 6️⃣ Financial & Support Ecosystem -->
+  <article class="ex-card">
+    <div class="top-media">
+      <img src="https://img.freepik.com/premium-photo/electric-car-from-network_438099-9524.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80">
+    </div>
+    <div class="content">
+      <h3>Financial & Support Ecosystem</h3>
+      <ul>
+        <li><i class="fa-solid fa-building-columns"></i> Banks & Financial Institutions</li>
+        <li><i class="fa-solid fa-hand-holding-dollar"></i> Investment & Funding Support</li>
+        <li><i class="fa-solid fa-lightbulb"></i> R&D Organisations & Start-ups</li>
+        <li><i class="fa-solid fa-store"></i> Distributors, Dealers & Retail Networks</li>
+      </ul>
+    </div>
+  </article>
+
+</div>
+
+
+<form action="https://formsubmit.co/abianu632@gmail.com" method="POST" id="exhibitor-form" class="container my-5 p-4 bg-white rounded shadow">
+  <!-- FormSubmit Required -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you">
+
+  <div class="row g-3">
+
+    <!-- Company Name -->
+    <div class="col-md-6">
+      <label for="company" class="form-label fw-bold">Company Name <span class="text-danger">*</span></label>
+      <input type="text" id="company" name="company" class="form-control" placeholder="Enter your company name" required>
+    </div>
+
+    <!-- Contact Person -->
+    <div class="col-md-6">
+      <label for="contact_person" class="form-label fw-bold">Contact Person Name <span class="text-danger">*</span></label>
+      <input type="text" id="contact_person" name="contact_person" class="form-control" placeholder="Full name" required>
+    </div>
+
+    <!-- Designation -->
+    <div class="col-md-6">
+      <label for="designation" class="form-label fw-bold">Designation</label>
+      <input type="text" id="designation" name="designation" class="form-control" placeholder="Your designation">
+    </div>
+
+    <!-- Mobile Number -->
+    <div class="col-md-6">
+      <label for="phone" class="form-label fw-bold">Mobile Number <span class="text-danger">*</span></label>
+      <input type="tel" id="phone" name="phone" pattern="\d{10}" class="form-control" placeholder="10-digit mobile number" required>
+    </div>
+
+    <!-- Email -->
+    <div class="col-md-6">
+      <label for="email" class="form-label fw-bold">Email ID <span class="text-danger">*</span></label>
+      <input type="email" id="email" name="email" class="form-control" placeholder="example@email.com" required>
+    </div>
+
+    <!-- Website -->
+    <div class="col-md-6">
+      <label for="website" class="form-label fw-bold">Website</label>
+      <input type="url" id="website" name="website" class="form-control" placeholder="https://yourcompany.com">
+    </div>
+
+    <!-- Products / Services -->
+    <div class="col-12">
+      <label for="products" class="form-label fw-bold">Products / Services of Your Company</label>
+      <textarea id="products" name="products" rows="2" class="form-control" placeholder="List your products/services"></textarea>
+    </div>
+
+    <!-- Space Type -->
+    <div class="col-md-6">
+      <label for="spaceType" class="form-label fw-bold">Bare Space / Shell Space <span class="text-danger">*</span></label>
+      <select id="spaceType" name="spaceType" class="form-select" required>
+        <option value="">Choose...</option>
+        <option value="Bare Space">Bare Space</option>
+        <option value="Shell Space">Shell Space</option>
+      </select>
+    </div>
+
+    <!-- Stall Area -->
+    <div class="col-md-6">
+      <label for="stallArea" class="form-label fw-bold">Preferred Stall Area (in Sq. Mtr.)</label>
+      <input type="number" id="stallArea" name="stallArea" class="form-control" placeholder="e.g., 9, 18, 27">
+    </div>
+
+    <!-- Address -->
+    <div class="col-12">
+      <label for="address" class="form-label fw-bold">Address</label>
+      <textarea id="address" name="address" rows="2" class="form-control" placeholder="Full address"></textarea>
+    </div>
+
+    <!-- Submit -->
+<!-- REGISTER NOW BUTTON WITH SAME EFFECT -->
+<div class="col-12 text-center mt-4" data-aos="fade-up" data-aos-delay="800">
+  <button type="submit" class="btn-default ev-btn">
+
+    Register Now
+
+    <div class="star-2">
+      <svg viewBox="0 0 784.11 815.53">
+        <path class="fil0"
+         d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 
+          207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 
+          184.09,-378.37 392.05,-407.74 -207.98,-29.38 
+          -371.16,-197.69 -392.06,-407.78z"/>
+      </svg>
+    </div>
+
+    <div class="star-3">
+      <svg viewBox="0 0 784.11 815.53">
+        <path class="fil0"
+         d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 
+          207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 
+          184.09,-378.37 392.05,-407.74 -207.98,-29.38 
+          -371.16,-197.69 -392.06,-407.78z"/>
+      </svg>
+    </div>
+
+    <div class="star-4">
+      <svg viewBox="0 0 784.11 815.53">
+        <path class="fil0"
+         d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 
+          207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 
+          184.09,-378.37 392.05,-407.74 -207.98,-29.38 
+          -371.16,-197.69 -392.06,-407.78z"/>
+      </svg>
+    </div>
+
+  </button>
+</div>
+
+
+  </div>
+</form>
+
+<!-- ================= Footer Section Starts ================= -->
+<footer class="rounded3 rounded-bottom-0 pt-10 pb-6 bg-dark text-white">
+  <div class="container">
+    <div class="footer-inner text-center text-xl-start">
+
+      <!-- Footer Body -->
+      <div class="footer-body my-5">
+        <div class="row gx-md-5 gy-5">
+
+          <!-- Logo & Description -->
+          <div class="col-xl-4">
+            <div class="footer-info">
+              <div class="footer-logo mb-2">
+                <img src="images/ev-logo-04.png" alt="Auto & EV Expo 2026 Logo" class="w-60">
+              </div>
+              <div class="footer-info-inner mb-4">
+                <p>Join us at Auto & EV Tech Expo 2026 to explore cutting-edge electric vehicles, smart mobility solutions, and innovative automotive technologies.</p>
+              </div>
+
+              <!-- Social Icons -->
+              <div class="footer-socials d-flex justify-content-center justify-content-xl-start">
+                <a href="https://www.facebook.com/" target="_blank" class="rounded-circle text-center me-2 bg-lightdark">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/" target="_blank" class="rounded-circle text-center me-2 bg-lightdark">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank" class="rounded-circle text-center me-2 bg-lightdark">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" class="rounded-circle text-center bg-lightdark">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-xl-2 col-md-6">
+            <div class="quick-links">
+              <h3 class="text-white mb-2">Quick Links</h3>
+              <div class="seperator w-25 border-bottom border-1 border-white mb-6 ms-xl-1 m-auto"></div>
+              <ul class="list-unstyled">
+                <li class="mb-4"><i class="fas fa-chevron-right me-2"></i><a href="index.html">Home</a></li>
+                <li class="mb-4"><i class="fas fa-chevron-right me-2"></i><a href="about.html">About Us</a></li>
+                <li class="mb-4"><i class="fas fa-chevron-right me-2"></i><a href="exhibitor.html">Exhibitors</a></li>
+                <li class="mb-4"><i class="fas fa-chevron-right me-2"></i><a href="visitor.html">Visitors</a></li>
+                <li class="mb-4"><i class="fas fa-chevron-right me-2"></i><a href="sponsorship.html">Sponsorship</a></li>
+                <li class="mb-4"><i class="fas fa-chevron-right me-2"></i><a href="gallery.html">Gallery</a></li>
+                <li><i class="fas fa-chevron-right me-2"></i><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+
+
+
+          <!-- Contact Info -->
+          <div class="col-xl-4">
+            <div class="footer-contact">
+              <h3 class="text-white mb-2">Contact Info</h3>
+              <div class="seperator w-25 border-bottom border-1 border-white mb-6 ms-xl-1 m-auto"></div>
+              <ul class="list-unstyled">
+                <li class="mb-2"><i class="fa fa-map-marker me-2" aria-hidden="true"></i> Hills Exhibition Centre, Hosur, Tamil Nadu, India</li>
+                <li class="mb-2"><a href="tel:+917406213220"><i class="fa fa-phone me-2"></i>+91 74062 13220</a></li>
+                <li class="mb-2"><a href="tel:+917406213221"><i class="fa fa-phone me-2"></i>+91 74062 13221</a></li>
+                <li class="mb-2"><a href="tel:+917406213222"><i class="fa fa-phone me-2"></i>+91 74062 13222</a></li>
+                <li class="mb-2"><a href="tel:+917406213223"><i class="fa fa-phone me-2"></i>+91 74062 13223</a></li>
+                <li><a href="mailto:autonevtecexpo@gmail.com"><i class="fa fa-envelope me-2"></i>autonevtecexpo@gmail.com</a></li>
+              </ul>
+            </div>
+          </div>
+         <!-- Features Links (Expo Dates with Icon) -->
+          <div class="col-xl-2 col-md-6">
+            <div class="quick-links">
+              <h3 class="text-white mb-2">Expo Dates</h3>
+              <div class="seperator w-25 border-bottom border-1 border-white mb-6 ms-xl-1 m-auto"></div>
+              <ul class="list-unstyled">
+                <li class="mb-4">
+                  <i class="fa fa-calendar-alt me-2"></i>
+                  <a href="#">Nov 20, 2026</a>
+                </li>
+                <li class="mb-4">
+                  <i class="fa fa-calendar-alt me-2"></i>
+                  <a href="#">Nov 21, 2026</a>
+                </li>
+                <li class="mb-4">
+                  <i class="fa fa-calendar-alt me-2"></i>
+                  <a href="#">Nov 22, 2026</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+        <!-- Footer Logo Bottom -->
+        <div class="text-center mt-6">
+          <img src="https://jayasurya1912.github.io/buildexpo/images/fotin.png" alt="Footer Bottom Logo" class="img-fluid" style="max-height:75px;">
+        </div>
+      <!-- Copyright -->
+      <div class="copyright px-6 py-4 rounded2 text-center position-relative mt-6">
+        <div class="overlay bg-white rounded2"></div>
+        <div class="copyright-inner position-relative">
+          <div class="row gy-4">
+
+            <div class="text-center">
+<p class="small mb-0">
+  &copy; 2026 Auto & EV Tech Expo. All Rights Reserved. Developed by <a href="https://techmayon.com" target="_blank" class="text-white text-decoration-underline">Tech Mayon</a>
+</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</footer>
+<!-- ================= Footer Section Ends ================= -->
+
+
+
+
+  <!--Back-to-top Button start-->
+  <div id="back-to-top">
+    <a href="#" class="bg-green position-relative align-items-center rounded-circle d-block border border-4 border-grey"></a>
+  </div>
+  <!--Bacl-to-top Button end-->
+  <!-- Scripts -->
+  <script src="./assets/js/jquery-3.7.1.min.js"></script>
+  <script src="./assets/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/plugin.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/custom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+ 
+
+</body>
+
+</html>

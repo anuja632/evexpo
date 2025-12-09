@@ -20,7 +20,6 @@
   <link rel="stylesheet" href="./assets/css/default.css">
   <!--Custom CSS-->
   <link rel="stylesheet" href="./assets/css/styles.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
 
   <!--FontAwesome CSS-->
   <link rel="stylesheet" href="icons/font-awesome.min.css">
@@ -95,7 +94,7 @@
 
         <!-- Get a Quote Button -->
         <div class="col-lg-3 text-end">
-                <a class="ev-btn" href="contact.html">
+               <a class="ev-btn" href="contact.html">
   Get a Quote
 
 
@@ -139,25 +138,386 @@
 
   </header>
   <!-- Header Section Ends -->
-<!-- Banner -->
-<div class="banner">
-  <h1 data-aos="fade-up">Contact Us</h1>
-</div>
+<style>
+  :root{
+    --card-bg:#0f1a24;
+    --card-accent:#f7941d;
+    --panel-top:#ffffff;
+    --gutter:28px;
+    --max-width:1200px;
+  }
+
+  
+.sponsor-section {
+  background: #f9f9f9;
+}
+
+/* CARD BASE */
+.sponsor-card {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 0 0 20px 20px;
+  /* border: 2px solid #0088cc; */
+  text-align: center;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+  transition: .4s ease;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+/* AUTO / EV SHAPE */
+.ev-card {
+  clip-path: polygon(
+    12% 0%, 35% 0%, 45% 10%, 55% 10%, 65% 0%, 88% 0%,
+    100% 18%, 100% 100%, 0% 100%, 0% 18%
+  );
+  position: relative;
+}
+
+/* HOVER BACKGROUND IMAGE */
+.ev-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-image: var(--hover-bg);
+  transform: scale(1.1);
+  opacity: 0;
+  transition: .45s ease;
+  z-index: 1;
+}
+
+/* HOVER OVERLAY */
+.ev-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(42, 41, 41, 0.85); /* strong black */
+
+  opacity: 0;
+  transition: .45s ease;
+  z-index: 2;
+}
+
+.ev-card:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.ev-card:hover::after {
+  opacity: 1;
+}
 
 
-<!-- Gallery Section -->
-<div class="container py-5">
-  <h2 class="text-center section-title">Event Gallery</h2>
+/* CONTENT ABOVE IMAGE */
+.ev-card * {
+  position: relative;
+  z-index: 3;
+}
 
-  <div class="row g-4">
-    <div class="col-md-4 col-sm-6"><img src="https://revexpo.in/wp-content/uploads/2025/01/075A9639-1-scaled.jpg" class="gallery-img"></div>
-    <div class="col-md-4 col-sm-6"><img src="https://revexpo.in/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-07-at-15.54.02_4b4fb9e9.jpg" class="gallery-img"></div>
-    <div class="col-md-4 col-sm-6"><img src="https://revexpo.in/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-07-at-15.54.00_5081c4b0.jpg" class="gallery-img"></div>
-    <div class="col-md-4 col-sm-6"><img src="https://revexpo.in/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-07-at-15.54.01_5cc2cf8b.jpg" class="gallery-img"></div>
-    <div class="col-md-4 col-sm-6"><img src="https://revexpo.in/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-07-at-15.54.01_5173b05f.jpg" class="gallery-img"></div>
-    <div class="col-md-4 col-sm-6"><img src="https://revexpo.in/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-07-at-16.13.40_5778add6.jpg" class="gallery-img"></div>
+.ev-card p{
+  text-align: justify;
+}
+/* HOVER EFFECT */
+.ev-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.22);
+  border-color: #00aaff;
+}
+
+/* ICON */
+.icon-box {
+  margin-top: 15px;
+  width: 50px;
+  height: 50px;
+  background: #e8f7ff;
+  color: #0088cc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin: 0 auto 18px;
+  transition: .3s;
+}
+
+.ev-card:hover .icon-box {
+  background: #0088cc;
+  color: #fff;
+}
+
+/* TEXT COLOR ON HOVER */
+.ev-card:hover h5,
+.ev-card:hover p {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 575px) {
+  .sponsor-card { padding: 25px 20px; }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .sponsor-card { padding: 28px; }
+}
+
+@media (min-width: 992px) {
+  .col-lg-4 {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+}
+
+/* ------------ FORM STYLING ------------- */
+#sponsorForm {
+  border: 1px solid #e8e8e8;
+  border-radius: 20px;
+  padding: 35px;
+  transition: .3s ease;
+}
+
+#sponsorForm:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+/* Labels */
+#sponsorForm .form-label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Inputs & Selects */
+#sponsorForm .form-control,
+#sponsorForm .form-select {
+  height: 45px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  transition: .3s ease;
+}
+
+#sponsorForm textarea.form-control {
+  height: auto;
+}
+
+/* Focus Effect */
+#sponsorForm .form-control:focus,
+#sponsorForm .form-select:focus,
+#sponsorForm textarea:focus {
+  border-color: #0088cc;
+  box-shadow: 0 0 0 3px rgba(0,136,204,0.2);
+}
+
+/* Submit Button */
+.btn-default {
+  background: #0088cc;
+  color: #fff;
+  padding: 12px 40px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  transition: .3s ease;
+  font-weight: 600;
+}
+
+.btn-default:hover {
+  background: #006fa6;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,136,204,0.4);
+}
+
+/* Mobile Responsive */
+@media (max-width: 576px) {
+  #sponsorForm {
+    padding: 22px;
+  }
+
+  .btn-default {
+    width: 100%;
+  }
+}
+
+
+
+</style>
+
+ 
+  
+  <!-- Banner Section Starts -->
+  <section class="banner breadcrumb mb-0 pt-11 pb-10 position-relative rounded3 rounded-top-0">
+    <div class="overlay rounded3 rounded-top-0"></div>
+    <div class="container position-relative">
+      <div class="banner-inner pt-10 w-lg-75 m-auto text-center text-white ">
+        <div class="section-title mb-2">
+          <h1 class="text-white mb-2">About Us</h1>
+          <ul class="list-unstyled d-flex justify-content-center">
+            <li><a href="index.html">Home</a></li>
+            <li class="mx-4"><i class="fa fa-star-o green" aria-hidden="true"></i></li>
+            <li><a href="">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Banner Section Ends -->
+
+
+
+
+<section class="sponsor-section py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">Sponsorship Benefits</h2>
+
+    <div class="row g-4">
+
+      <!-- Card 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="sponsor-card ev-card" data-bg="https://img.freepik.com/premium-photo/man-woman-car-showroom-using-tablet_926199-2103940.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80">
+          <div class="icon-box"><i class="fas fa-bullhorn"></i></div>
+          <h5>Brand Visibility & Awareness</h5>
+          <p>
+Your brand will be showcased across event promotions, digital platforms, and on-site branding spaces.
+ This exposure ensures maximum visibility among decision-makers, investors, and industry.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="sponsor-card ev-card" data-bg="https://img.freepik.com/premium-photo/electric-station-service-electrical-power-car-car-park_926199-3502469.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80">
+          <div class="icon-box"><i class="fas fa-handshake"></i></div>
+          <h5>High-Value Networking Opportunities</h5>
+          <p>
+            Sponsors gain direct access to industry leaders, buyers, and top-level professionals in the EV and auto sector.
+ Meet, engage, and build relationships that can convert into long-term business.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="sponsor-card ev-card" data-bg="https://img.freepik.com/premium-photo/auto-business-car-sale-technology-people-concept-happy-couple-with-car-dealer-auto-show-salon_380164-91314.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80">
+          <div class="icon-box"><i class="fas fa-award"></i></div>
+          <h5>Industry Leadership & Credibility</h5>
+          <p>
+Position your brand as a thought leader in front of a highly targeted and relevant audience.
+ Sponsorship strengthens credibility and aligns your business with innovation and technology.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="sponsor-card ev-card" data-bg="https://img.freepik.com/free-photo/nature-suffocated-by-co2-pollution_23-2150858283.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80">
+          <div class="icon-box"><i class="fas fa-chart-line"></i></div>
+          <h5>Strategic Marketing & Promotion</h5>
+          <p>
+          Your brand receives integrated marketing support across online and offline campaigns.
+ From social media to onsite engagement, every touchpoint reinforces your market presence.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="sponsor-card ev-card" data-bg="https://img.freepik.com/premium-photo/futuristic-ev-car-photography-motor-show_923558-8338.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80">
+          <div class="icon-box"><i class="fas fa-store-alt"></i></div>
+          <h5>Premium Exhibition Experience</h5>
+          <p>
+            Sponsors get priority booth positioning and enhanced stall visibility throughout the expo.
+ This ensures higher footfall, stronger engagement, and greater business conversion opportunities.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="sponsor-card ev-card" data-bg="https://img.freepik.com/free-photo/futuristic-environmentally-friendly-city-with-green-spaces_23-2150780626.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80">
+          <div class="icon-box"><i class="fas fa-star"></i></div>
+          <h5>Exclusive Privileges & ROI Benefits</h5>
+          <p>
+Sponsors receive VIP access, special recognition, and data-driven post-event reports.
+ These insights help measure performance, track engagement, and maximize return on investment.
+          </p>
+        </div>
+      </div>
+
+    </div>
   </div>
+</section>
+<div class="container">
+<form action="https://formsubmit.co/anujaramasamyv@gmail.com" 
+      method="POST" id="sponsorForm"
+      class="p-4 shadow rounded-4 bg-white">
+
+  <!-- Required Hidden Fields -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_subject" value="New Sponsorship Form Submission">
+
+  <div class="row g-3">
+
+    <div class="col-md-6">
+      <label class="form-label">Company Name</label>
+      <input type="text" class="form-control" name="companyName" required>
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">Contact Person</label>
+      <input type="text" class="form-control" name="contactPerson" required>
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">Email Address</label>
+      <input type="email" class="form-control" name="email" required>
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">Phone Number</label>
+      <input type="tel" class="form-control" name="phone" required>
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">Sponsorship Package</label>
+      <select class="form-select" name="package">
+        <option value="" disabled selected>Select Package</option>
+        <option>Platinum Sponsor</option>
+        <option>Gold Sponsor</option>
+        <option>Silver Sponsor</option>
+        <option>Associate Sponsor</option>
+      </select>
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">Website (optional)</label>
+      <input type="url" class="form-control" name="website">
+    </div>
+
+    <div class="col-12">
+      <label class="form-label">Message</label>
+      <textarea class="form-control" rows="4" name="message"></textarea>
+    </div>
+
+    <div class="col-12 text-center mt-4">
+      <button type="submit" class="btn-default">Submit Now</button>
+    </div>
+
+  </div>
+</form>
+
 </div>
+
+<script>
+document.querySelectorAll('.ev-card').forEach(card => {
+  const bg = card.getAttribute('data-bg');
+  card.style.setProperty('--hover-bg', `url(${bg})`);
+});
+</script>
+
+
+
 
 <!-- ================= Footer Section Starts ================= -->
 <footer class="rounded3 rounded-bottom-0 pt-10 pb-6 bg-dark text-white">
