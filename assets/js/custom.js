@@ -8,6 +8,55 @@
     preloader.style.display = "none";
   }
 });
+  (function(){
+    // Helper: format with commas
+    function numberWithCommas(x){
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    const stats = document.querySelectorAll('.stat-number');
+    let started = false;
+
+    if('IntersectionObserver' in window && stats.length){
+      const io = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            const el = entry.target;
+            if(el.getAttribute('data-started')) return;
+            el.setAttribute('data-started', 'true');
+            const target = parseInt(el.dataset.target, 10) || 0;
+            const duration = 1600; // ms
+            const frameRate = 50; // ms
+            const totalFrames = Math.round(duration / frameRate);
+            let frame = 0;
+            const isLarge = target > 999;
+            const step = target / totalFrames;
+
+            const counter = setInterval(() => {
+              frame++;
+              const current = Math.min(Math.round(step * frame), target);
+              el.textContent = isLarge ? numberWithCommas(current) : current;
+              if(frame >= totalFrames){
+                el.textContent = isLarge ? numberWithCommas(target) : target;
+                clearInterval(counter);
+              }
+            }, frameRate);
+
+            // optionally unobserve
+            observer.unobserve(el);
+          }
+        });
+      }, { threshold: 0.45 });
+
+      stats.forEach(s => io.observe(s));
+    } else {
+      // fallback: instantly fill
+      stats.forEach(el => {
+        const target = parseInt(el.dataset.target, 10) || 0;
+        el.textContent = target.toLocaleString();
+      });
+    }
+  })();
 
 const targetDate = new Date("Nov 20, 2026 00:00:00").getTime();
 
@@ -30,18 +79,23 @@ const timer = setInterval(function() {
         document.querySelector(".timer").innerHTML = "<h3>Event Started!</h3>";
     }
 },1000);
-/* ------------------------
-   1. Navbar Scroll Sticky
---------------------------- */
-window.addEventListener("scroll", function () {
-    const navbar = document.querySelector(".navbar-custom");
 
-    if (window.scrollY > 20) {
-        navbar.classList.add("nav-scroll-active");
+  const scrollBtn = document.getElementById("scrollTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollBtn.style.display = "block";
     } else {
-        navbar.classList.remove("nav-scroll-active");
+      scrollBtn.style.display = "none";
     }
-});
+  });
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
 
 /* -----------------------------------------
    2. Mobile Offcanvas Auto-Close on Click

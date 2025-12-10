@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
 
 <head>
@@ -13,6 +12,8 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="./assets/css/boostrap.css">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
   <!--CSS Plugins-->
   <link rel="stylesheet" href="/assets/css/plugin.css">
@@ -21,143 +22,83 @@
   <!--Custom CSS-->
   <link rel="stylesheet" href="./assets/css/styles.css">
 
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
   <!--FontAwesome CSS-->
-  <link rel="stylesheet" href="icons/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<style>
+  <!-- <link rel="stylesheet" href="icons/font-awesome.min.css"> -->
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-.visitor-section {
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.visitor-section .title {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 30px;
-}
-
-.visitor-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 30px;
-  justify-items: center;
-}
-
-.visitor-card {
-  width: 150px;
-  text-align: center;
-  transition: 0.3s ease-in-out;
-}
-
-.visitor-card img {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 10px;
-  filter: brightness(0) saturate(100%) invert(44%) sepia(47%) saturate(2036%) hue-rotate(70deg) brightness(92%) contrast(89%);
-}
-
-
-.visitor-card p {
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.3;
-  color:black;
-}
-
-/* Hover Effect */
-.visitor-card:hover {
-  transform: translateY(-8px);
-  filter: drop-shadow(0px 5px 8px rgba(0,0,0,0.2));
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-  .visitor-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .visitor-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-
-
-
-</style>
 </head>
+
 <body>
-    <!-- Preloader -->
+      <!-- Preloader -->
   <div id="preloader">
     <img src="https://st.ourhtmldemo.com/new/mechanic_hub/images/icon/preloader.gif" alt="Loading..." />
   </div>
+<!-- Bootstrap Navbar -->
+<div class="top">
+  <img src="https://anuja632.github.io/bakeryfoodexpo/asset/images/banner/topnav.png" loading="lazy">
+</div>
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg navbar-custom bg-white shadow-sm sticky-top">
+  <div class="container-fluid d-flex align-items-center justify-content-between">
 
-  <!-- Header Section Starts -->
-  <header class="position-relative z-2">
+    <!-- Logo (Mobile Only, centered below 1080px) -->
+    <a class="navbar-brand mobile-logo" href="index.html">
+      <img src="https://anuja632.github.io/bakeryfoodexpo/asset/images/logo.png" loading="lazy" alt="Bakery & Food Tech Expo" class="navbar-logo" style="height:70px;">
+    </a>
 
-<div class="header-nav-menu" id="header-nav-menu">
-  <div class="container">
-    <div class="header-nav-menu-inner py-4">
-      <div class="row align-items-center justify-content-between">
+    <!-- Hamburger (for mobile) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Desktop Menu -->
+    <div class="collapse navbar-collapse justify-content-center d-none d-lg-block">
+      <ul class="navbar-nav w-100 justify-content-center align-items-center">
         
-        <!-- Logo -->
-        <div class="col-xl-2 col-md-3 col-5">
-          <div class="navbar-logo m-0">
-            <a href="index.html"><img src="images/ev-logo-04.png" alt="Logo" class="w-100"></a>
-          </div>
-        </div>
+        <!-- Left Menu -->
+        <li class="nav-item"><a class="nav-link " href="index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+        <!-- <li class="nav-item"><a class="nav-link " href="exhibitors.html">EXHIBITORS</a></li> -->
+        <!-- Dropdown: Exhibitors -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle left-gap" href="#" id="exhibitorsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            EXHIBITORS
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="exhibitorsDropdown">
+            <li><a class="dropdown-item" href="exhibitor.html">EXHIBITORS</a></li>
+            <li><a class="dropdown-item" href="./asset/images/BAKERY AND FOOD TEC EXPO – 2026 FLOOR PLAN.pdf" target="_blank">FLOOR PLAN</a></li>
+            <li><a class="dropdown-item" href="./asset/images/BAKERY AND FOOD TEC EXPO – 2026 PROFILE.pdf" target="_blank">BROCHURE</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link active " href="visitor.html">VISITORS</a></li>
 
-        <!-- Navbar -->
-        <div class="col-lg-7">
-          <div class="navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="navbar-nav align-items-center justify-content-end flex-row" id="responsive-menu">
+        <!-- Dropdown: Visitors -->
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle left-gap" href="#" id="visitorsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            VISITORS
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="visitorsDropdown">
+            <li><a class="dropdown-item" href="visitors.html">VISITORS</a></li>
+            <li><a class="dropdown-item" href="./asset/images/BAKERY AND FOOD TEC EXPO – 2026 FLOOR PLAN.pdf" target="_blank">FLOOR PLAN</a></li>
+            <li><a class="dropdown-item" href="./asset/images/BAKERY AND FOOD TEC EXPO – 2026 PROFILE.pdf" target="_blank">BROCHURE</a></li>
+          </ul>
+        </li> -->
 
-              <li class="nav-item">
-                <a class="nav-link px-3 py-0 white text-uppercase fw-medium" href="index.html">Home</a>
-              </li>
+        <li class="nav-item"><a class="nav-link " href="sponsorship.html">SPONSORSHIP</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">GALLERY</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+      </ul>
+    </div>
 
-              <li class="nav-item">
-                <a class="nav-link active px-3 py-0 white text-uppercase fw-medium" href="about.html">About</a>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle px-3 py-0 white text-uppercase fw-medium" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Exhibitor
-                </a>
-                <ul class="dropdown-menu bg-grey p-0 rounded1 bg-off-white border-0">
-                  <li><a class="dropdown-item py-2 px-7 dark-grey border-0" href="exhibitor.html">Exhibitor</a></li>
-                  <li><a class="dropdown-item py-2 px-7 dark-grey border-0" href="brochure.html">Brochure</a></li>
-                  <li><a class="dropdown-item py-2 px-7 dark-grey border-0" href="floor-plan.html">Floor Plan</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link px-3 py-0 white text-uppercase fw-medium" href="visitor.html">Visitor</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link px-3 py-0 white text-uppercase fw-medium" href="sponsorship.html">Sponsorship</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link px-3 py-0 white text-uppercase fw-medium" href="gallery.html">Gallery</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link px-3 py-0 white text-uppercase fw-medium" href="contact.html">Contact</a>
-              </li>
-
-            </ul>
-          </div>
-        </div>
-
-        <!-- Get a Quote Button -->
-        <div class="col-lg-3 text-end">
-               <a class="ev-btn" href="contact.html">
+    <!-- Right-side Button -->
+    <div class="d-none d-lg-block">
+      <a class="ev-btn" href="contact.html">
   Get a Quote
 
 
@@ -192,32 +133,44 @@
 
  
 </a>
-        </div>
+    </div>
+  </div>
+</nav>
+<!-- Navbar End -->
+ <!-- ===== Offcanvas Menu (Mobile) ===== -->
+<div class="offcanvas offcanvas-end bg-white" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+  <div class="offcanvas-header justify-content-between align-items-center">
+    <!-- Logo -->
+    <a href="index.html" class="navbar-brand m-0">
+      <img src="https://anuja632.github.io/bakeryfoodexpo/asset/images/logo.png" alt="Bakery Expo Logo" style="height: 80px;" loading="lazy">
+    </a>
+    <!-- Close button -->
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
 
-      </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav text-center">
+      <li class="nav-item"><a class="nav-link " href="index.html">HOME</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+      <li class="nav-item"><a class="nav-link" href="exhibitors.html">EXHIBITORS</a></li>
+      <li class="nav-item"><a class="nav-link active" href="visitors.html">VISITORS</a></li>
+      <li class="nav-item"><a class="nav-link" href="sponsorship.html">SPONSORSHIP</a></li>
+      <li class="nav-item"><a class="nav-link" href="gallery.html">GALLERY</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+    </ul>
+
+    <div class="text-center mt-4">
+      <a href="contact.html" class="btn-default">REGISTERED</a>
     </div>
   </div>
 </div>
 
-  </header>
-  <!-- Header Section Ends -->
-  
+
   <!-- Banner Section Starts -->
-  <section class="banner breadcrumb mb-0 pt-11 pb-10 position-relative rounded3 rounded-top-0">
-    <div class="overlay rounded3 rounded-top-0"></div>
-    <div class="container position-relative">
-      <div class="banner-inner pt-10 w-lg-75 m-auto text-center text-white ">
-        <div class="section-title mb-2">
-          <h1 class="text-white mb-2">About Us</h1>
-          <ul class="list-unstyled d-flex justify-content-center">
-            <li><a href="index.html">Home</a></li>
-            <li class="mx-4"><i class="fa fa-star" aria-hidden="true"></i></li>
-            <li><a href="">About Us</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="page-header">
+ <img src="https://charger-nuxt.vercel.app/_nuxt/04.vUwzxK2H.jpg" loading="lazy">
+</div>
+ 
   <!-- Banner Section Ends -->
 
 
@@ -310,41 +263,41 @@
 
 <!-- REGISTER NOW BUTTON WITH SAME EFFECT -->
 <div class="col-12 text-center mt-4" data-aos="fade-up" data-aos-delay="800">
-  <button type="submit" class="btn-default ev-btn">
+  <a class="ev-btn" href="contact.html">
+ Submit
 
-    Register Now
 
-    <div class="star-2">
-      <svg viewBox="0 0 784.11 815.53">
-        <path class="fil0"
-         d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 
-          207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 
-          184.09,-378.37 392.05,-407.74 -207.98,-29.38 
-          -371.16,-197.69 -392.06,-407.78z"/>
-      </svg>
-    </div>
+  <div class="star-2">
+    <svg viewBox="0 0 784.11 815.53">
+      <path class="fil0"
+       d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 
+        371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 
+        392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"/>
+    </svg>
+  </div>
 
-    <div class="star-3">
-      <svg viewBox="0 0 784.11 815.53">
-        <path class="fil0"
-         d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 
-          207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 
-          184.09,-378.37 392.05,-407.74 -207.98,-29.38 
-          -371.16,-197.69 -392.06,-407.78z"/>
-      </svg>
-    </div>
+  <div class="star-3">
+    <svg viewBox="0 0 784.11 815.53">
+      <path class="fil0"
+       d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 
+        371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 
+        392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"/>
+    </svg>
+  </div>
 
-    <div class="star-4">
-      <svg viewBox="0 0 784.11 815.53">
-        <path class="fil0"
-         d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 
-          207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 
-          184.09,-378.37 392.05,-407.74 -207.98,-29.38 
-          -371.16,-197.69 -392.06,-407.78z"/>
-      </svg>
-    </div>
+  <div class="star-4">
+    <svg viewBox="0 0 784.11 815.53">
+      <path class="fil0"
+       d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 
+        371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 
+        392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"/>
+    </svg>
+  </div>
 
-  </button>
+  
+
+ 
+</a>
 </div>
 
       <!-- Status Message -->
@@ -363,51 +316,51 @@
 
 
 <section class="visitor-section"> 
-  <h2 class="title">Visitor Categories</h2>
+  <h2 class="title" data-aos="fade-up">Visitor Categories</h2>
 
   <div class="visitor-grid">
 
     <!-- Automotive & EV Industry Professionals -->
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/14947/14947107.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>OEMs & Vehicle Manufacturers</p></div>
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/15220/15220273.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>EV Startups & Emerging Brands</p></div>
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/9411/9411861.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>Component & Parts Manufacturers</p></div>
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/10335/10335039.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>Tier 1, Tier 2 & Tier 3 Suppliers</p></div>
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/2104/2104934.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>EV Assembly Units</p></div>
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/18143/18143706.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>Charging & Battery System Providers</p></div>
+    <div class="visitor-card" data-aos="zoom-in"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/14947/14947107.png"><p>OEMs & Vehicle Manufacturers</p></div>
+    <div class="visitor-card" data-aos="fade-up"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/15220/15220273.png"><p>EV Startups & Emerging Brands</p></div>
+    <div class="visitor-card" data-aos="zoom-in-up"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/9411/9411861.png"><p>Component & Parts Manufacturers</p></div>
+    <div class="visitor-card" data-aos="flip-up"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/10335/10335039.png"><p>Tier 1, Tier 2 & Tier 3 Suppliers</p></div>
+    <div class="visitor-card" data-aos="fade-in"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/2104/2104934.png"><p>EV Assembly Units</p></div>
+    <div class="visitor-card" data-aos="zoom-out"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/18143/18143706.png"><p>Charging & Battery System Providers</p></div>
 
-    <!-- Battery, Energy & Charging Sector -->
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/11453/11453827.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>Battery Manufacturers & Integrators</p></div>
-    <div class="visitor-card"><img src="http://cdn-icons-png.freepik.com/256/18344/18344713.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>BMS, Cell & Pack Developers</p></div>
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/10492/10492460.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>Energy Storage Companies</p></div>
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/13518/13518090.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>Fast Charging & Smart Grid Companies</p></div>
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/2781/2781485.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>Renewable Energy Providers</p></div>
+    <!-- Battery Sector -->
+    <div class="visitor-card" data-aos="fade-down"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/11453/11453827.png"><p>Battery Manufacturers & Integrators</p></div>
+    <div class="visitor-card" data-aos="zoom-in-down"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/18344/18344713.png"><p>BMS, Cell & Pack Developers</p></div>
+    <div class="visitor-card" data-aos="flip-down"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/10492/10492460.png"><p>Energy Storage Companies</p></div>
+    <div class="visitor-card" data-aos="fade-up"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/13518/13518090.png"><p>Fast Charging & Smart Grid Companies</p></div>
+    <div class="visitor-card" data-aos="zoom-in"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/2781/2781485.png"><p>Renewable Energy Providers</p></div>
 
-    <!-- Engineering, Technology & R&D -->
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/18041/18041976.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>Product Designers & Engineers</p></div>
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/13853/13853258.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>Research & Development Teams</p></div>
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/5396/5396535.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>Academic & Institutional Delegates</p></div>
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/16982/16982901.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>Technology Solution Providers</p></div>
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/15863/15863028.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>Software, AI, IoT & Automation Experts</p></div>
+    <!-- Engineering & R&D -->
+    <div class="visitor-card" data-aos="zoom-out"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/18041/18041976.png"><p>Product Designers & Engineers</p></div>
+    <div class="visitor-card" data-aos="fade-in"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/13853/13853258.png"><p>Research & Development Teams</p></div>
+    <div class="visitor-card" data-aos="zoom-in-up"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/5396/5396535.png"><p>Academic & Institutional Delegates</p></div>
+    <div class="visitor-card" data-aos="flip-up"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/16982/16982901.png"><p>Technology Solution Providers</p></div>
+    <div class="visitor-card" data-aos="fade-down"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/15863/15863028.png"><p>Software, AI, IoT & Automation Experts</p></div>
 
-    <!-- Distribution & Retail Network -->
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/512/6543/6543225.png?uid=R208066470&ga=GA1.1.1679070017.1753435898"><p>Dealers & Distributors</p></div>
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/1117/1117951.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>Spare Parts Traders</p></div>
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/14212/14212243.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>Retailers & Showrooms</p></div>
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/12608/12608602.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>Importers & Exporters</p></div>
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/512/7816/7816872.png?uid=R208066470&ga=GA1.1.1679070017.1753435898"><p>Logistics & Fleet Operators</p></div>
+    <!-- Distribution -->
+    <div class="visitor-card" data-aos="zoom-in"><img loading="lazy" src="https://cdn-icons-png.freepik.com/512/6543/6543225.png"><p>Dealers & Distributors</p></div>
+    <div class="visitor-card" data-aos="fade-up"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/1117/1117951.png"><p>Spare Parts Traders</p></div>
+    <div class="visitor-card" data-aos="zoom-out"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/14212/14212243.png"><p>Retailers & Showrooms</p></div>
+    <div class="visitor-card" data-aos="flip-down"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/12608/12608602.png"><p>Importers & Exporters</p></div>
+    <div class="visitor-card" data-aos="zoom-in-down"><img loading="lazy" src="https://cdn-icons-png.freepik.com/512/7816/7816872.png"><p>Logistics & Fleet Operators</p></div>
 
-    <!-- Business, Investors & Government -->
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/11135/11135152.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>Venture Capitalists & Investors</p></div>
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/9070/9070825.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>Business Owners & Entrepreneurs</p></div>
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/7019/7019437.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>Government Departments & Policy Makers</p></div>
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/15890/15890124.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>Testing & Certification Agencies</p></div>
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/547/547166.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>Financial Institutions & Banking Sector</p></div>
+    <!-- Business & Government -->
+    <div class="visitor-card" data-aos="fade-in"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/11135/11135152.png"><p>Venture Capitalists & Investors</p></div>
+    <div class="visitor-card" data-aos="zoom-in-up"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/9070/9070825.png"><p>Business Owners & Entrepreneurs</p></div>
+    <div class="visitor-card" data-aos="fade-down"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/7019/7019437.png"><p>Government Departments & Policy Makers</p></div>
+    <div class="visitor-card" data-aos="zoom-out"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/15890/15890124.png"><p>Testing & Certification Agencies</p></div>
+    <div class="visitor-card" data-aos="flip-up"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/547/547166.png"><p>Financial Institutions & Banking Sector</p></div>
 
     <!-- General Visitors -->
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/8333/8333107.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>Auto Enthusiasts & EV Buyers</p></div>
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/11545/11545995.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>Students & Trainers</p></div>
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/10203/10203632.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>EV Community Members</p></div>
-    <div class="visitor-card"><img src="https://cdn-icons-png.freepik.com/256/1376/1376482.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label"><p>Media & Press</p></div>
+    <div class="visitor-card" data-aos="zoom-in"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/8333/8333107.png"><p>Auto Enthusiasts & EV Buyers</p></div>
+    <div class="visitor-card" data-aos="fade-up"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/11545/11545995.png"><p>Students & Trainers</p></div>
+    <div class="visitor-card" data-aos="zoom-in-down"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/10203/10203632.png"><p>EV Community Members</p></div>
+    <div class="visitor-card" data-aos="zoom-in-up"><img loading="lazy" src="https://cdn-icons-png.freepik.com/256/1376/1376482.png"><p>Media & Press</p></div>
 
   </div>
 </section>
@@ -422,10 +375,10 @@
         <div class="row gx-md-5 gy-5">
 
           <!-- Logo & Description -->
-          <div class="col-xl-4">
+          <div class="col-xl-4 col-md-6" data-aos="fade-up">
             <div class="footer-info">
               <div class="footer-logo mb-2">
-                <img src="images/ev-logo-04.png" alt="Auto & EV Expo 2026 Logo" class="w-60">
+                <img src="images/ev-logo-04.png" alt="Auto & EV Expo 2026 Logo" class="w-60" loading="lazy">
               </div>
               <div class="footer-info-inner mb-4">
                 <p>Join us at Auto & EV Tech Expo 2026 to explore cutting-edge electric vehicles, smart mobility solutions, and innovative automotive technologies.</p>
@@ -450,7 +403,7 @@
           </div>
 
           <!-- Quick Links -->
-          <div class="col-xl-2 col-md-6">
+          <div class="col-xl-2 col-md-6" data-aos="fade-up">
             <div class="quick-links">
               <h3 class="text-white mb-2">Quick Links</h3>
               <div class="seperator w-25 border-bottom border-1 border-white mb-6 ms-xl-1 m-auto"></div>
@@ -466,15 +419,13 @@
             </div>
           </div>
 
-
-
           <!-- Contact Info -->
-          <div class="col-xl-4">
+          <div class="col-xl-4 col-md-6" data-aos="fade-up">
             <div class="footer-contact">
               <h3 class="text-white mb-2">Contact Info</h3>
               <div class="seperator w-25 border-bottom border-1 border-white mb-6 ms-xl-1 m-auto"></div>
               <ul class="list-unstyled">
-                <li class="mb-2"><i class="fa fa-map-marker me-2" aria-hidden="true"></i> Hills Exhibition Centre, Hosur, Tamil Nadu, India</li>
+                <li class="mb-2"><i class="fa fa-map-marker me-2"></i> Hills Exhibition Centre, Hosur, Tamil Nadu, India</li>
                 <li class="mb-2"><a href="tel:+917406213220"><i class="fa fa-phone me-2"></i>+91 74062 13220</a></li>
                 <li class="mb-2"><a href="tel:+917406213221"><i class="fa fa-phone me-2"></i>+91 74062 13221</a></li>
                 <li class="mb-2"><a href="tel:+917406213222"><i class="fa fa-phone me-2"></i>+91 74062 13222</a></li>
@@ -483,47 +434,33 @@
               </ul>
             </div>
           </div>
-         <!-- Features Links (Expo Dates with Icon) -->
-          <div class="col-xl-2 col-md-6">
+
+          <!-- Expo Dates -->
+          <div class="col-xl-2 col-md-6" data-aos="fade-up">
             <div class="quick-links">
               <h3 class="text-white mb-2">Expo Dates</h3>
               <div class="seperator w-25 border-bottom border-1 border-white mb-6 ms-xl-1 m-auto"></div>
               <ul class="list-unstyled">
-                <li class="mb-4">
-                  <i class="fa fa-calendar-alt me-2"></i>
-                  <a href="#">Nov 20, 2026</a>
-                </li>
-                <li class="mb-4">
-                  <i class="fa fa-calendar-alt me-2"></i>
-                  <a href="#">Nov 21, 2026</a>
-                </li>
-                <li class="mb-4">
-                  <i class="fa fa-calendar-alt me-2"></i>
-                  <a href="#">Nov 22, 2026</a>
-                </li>
+                <li class="mb-4"><i class="fa fa-calendar-alt me-2"></i><a href="#">Nov 20, 2026</a></li>
+                <li class="mb-4"><i class="fa fa-calendar-alt me-2"></i><a href="#">Nov 21, 2026</a></li>
+                <li class="mb-4"><i class="fa fa-calendar-alt me-2"></i><a href="#">Nov 22, 2026</a></li>
               </ul>
             </div>
           </div>
 
         </div>
-
       </div>
-        <!-- Footer Logo Bottom -->
-        <div class="text-center mt-6">
-          <img src="https://jayasurya1912.github.io/buildexpo/images/fotin.png" alt="Footer Bottom Logo" class="img-fluid" style="max-height:75px;">
-        </div>
+
+      <!-- Footer Logo Bottom -->
+      <div class="text-center mt-6" data-aos="fade-up">
+        <img src="https://jayasurya1912.github.io/buildexpo/images/fotin.png" alt="Footer Bottom Logo" class="img-fluid" style="max-height:75px;" loading="lazy">
+      </div>
+
       <!-- Copyright -->
-      <div class="copyright px-6 py-4 rounded2 text-center position-relative mt-6">
+      <div class="copyright px-6 py-4 rounded2 text-center position-relative mt-6" data-aos="fade-up">
         <div class="overlay bg-white rounded2"></div>
         <div class="copyright-inner position-relative">
-          <div class="row gy-4">
-
-            <div class="text-center">
-<p class="small mb-0">
-  &copy; 2026 Auto & EV Tech Expo. All Rights Reserved. Developed by <a href="https://techmayon.com" target="_blank" class="text-white text-decoration-underline">Tech Mayon</a>
-</p>
-            </div>
-          </div>
+          <p class="small mb-0">&copy; 2026 Auto & EV Tech Expo. All Rights Reserved. Developed by <a href="https://techmayon.com" target="_blank" class="text-white text-decoration-underline">Tech Mayon</a></p>
         </div>
       </div>
 
@@ -535,21 +472,52 @@
 
 
 
-  <!--Back-to-top Button start-->
-  <div id="back-to-top">
-    <a href="#" class="bg-green position-relative align-items-center rounded-circle d-block border border-4 border-grey"></a>
-  </div>
-  <!--Bacl-to-top Button end-->
-  <!-- Scripts -->
-  <script src="./assets/js/jquery-3.7.1.min.js"></script>
-  <script src="./assets/js/bootstrap.bundle.min.js"></script>
-  <script src="./assets/js/plugin.js"></script>
-  <script src="./assets/js/main.js"></script>
-  <script src="./assets/js/custom.js"></script>
+<!-- Floating Action Buttons -->
+<div class="floating-buttons">
+<a href="https://wa.me/917406213220?text=Hello%21%20Don%E2%80%99t%20miss%20the%20biggest%20Auto%20%26%20EV%20Expo%202026.%20Premium%20stalls%2C%20massive%20footfall%20%26%20top%20industry%20buyers%21%20Shall%20I%20share%20full%20details%3F" 
+   class="fab-btn whatsapp" 
+   target="_blank">
+   <i class="fab fa-whatsapp"></i>
+</a>
+
+
+  <!-- Phone -->
+  <a href="tel:+917406213220" class="fab-btn phone" aria-label="Call Us">
+    <i class="fas fa-phone"></i>
+  </a>
+
+<!-- Scroll To Top -->
+<button class="fab-btn bg-green" id="scrollTopBtn" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+</div>
+
+<!-- Scripts -->
+<script src="./assets/js/jquery-3.7.1.min.js"></script>
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/plugin.js"></script>
+<script src="./assets/js/main.js"></script>
+<script src="./assets/js/custom.js"></script>
+<!-- Bootstrap bundle (includes Popper) - only one copy -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- jQuery (one copy) - required by OwlCarousel -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Owl Carousel JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
- 
+<!-- AOS Script -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 1000,     // fast animation
+    once: false,       // repeat when entering viewport
+    mirror: true,      // animate on scroll up also
+
+  });
+</script>
 
 </body>
-
 </html>

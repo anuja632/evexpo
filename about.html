@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
 
 <head>
@@ -13,6 +12,8 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="./assets/css/boostrap.css">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
   <!--CSS Plugins-->
   <link rel="stylesheet" href="/assets/css/plugin.css">
@@ -21,80 +22,83 @@
   <!--Custom CSS-->
   <link rel="stylesheet" href="./assets/css/styles.css">
 
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
   <!--FontAwesome CSS-->
-  <link rel="stylesheet" href="icons/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- <link rel="stylesheet" href="icons/font-awesome.min.css"> -->
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
+
 <body>
-    <!-- Preloader -->
+      <!-- Preloader -->
   <div id="preloader">
     <img src="https://st.ourhtmldemo.com/new/mechanic_hub/images/icon/preloader.gif" alt="Loading..." />
   </div>
+<!-- Bootstrap Navbar -->
+<div class="top">
+  <img src="https://anuja632.github.io/bakeryfoodexpo/asset/images/banner/topnav.png" loading="lazy">
+</div>
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg navbar-custom bg-white shadow-sm sticky-top">
+  <div class="container-fluid d-flex align-items-center justify-content-between">
 
-  <!-- Header Section Starts -->
-  <header class="position-relative z-2">
+    <!-- Logo (Mobile Only, centered below 1080px) -->
+    <a class="navbar-brand mobile-logo" href="index.html">
+      <img src="https://anuja632.github.io/bakeryfoodexpo/asset/images/logo.png" loading="lazy" alt="Bakery & Food Tech Expo" class="navbar-logo" style="height:70px;">
+    </a>
 
-<div class="header-nav-menu" id="header-nav-menu">
-  <div class="container">
-    <div class="header-nav-menu-inner py-4">
-      <div class="row align-items-center justify-content-between">
+    <!-- Hamburger (for mobile) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Desktop Menu -->
+    <div class="collapse navbar-collapse justify-content-center d-none d-lg-block">
+      <ul class="navbar-nav w-100 justify-content-center align-items-center">
         
-        <!-- Logo -->
-        <div class="col-xl-2 col-md-3 col-5">
-          <div class="navbar-logo m-0">
-            <a href="index.html"><img src="images/ev-logo-04.png" alt="Logo" class="w-100"></a>
-          </div>
-        </div>
+        <!-- Left Menu -->
+        <li class="nav-item"><a class="nav-link " href="index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html">ABOUT US</a></li>
+        <!-- <li class="nav-item"><a class="nav-link " href="exhibitors.html">EXHIBITORS</a></li> -->
+        <!-- Dropdown: Exhibitors -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle left-gap" href="#" id="exhibitorsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            EXHIBITORS
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="exhibitorsDropdown">
+            <li><a class="dropdown-item" href="exhibitor.html">EXHIBITORS</a></li>
+            <li><a class="dropdown-item" href="./asset/images/BAKERY AND FOOD TEC EXPO – 2026 FLOOR PLAN.pdf" target="_blank">FLOOR PLAN</a></li>
+            <li><a class="dropdown-item" href="./asset/images/BAKERY AND FOOD TEC EXPO – 2026 PROFILE.pdf" target="_blank">BROCHURE</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link " href="visitor.html">VISITORS</a></li>
 
-        <!-- Navbar -->
-        <div class="col-lg-7">
-          <div class="navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="navbar-nav align-items-center justify-content-end flex-row" id="responsive-menu">
+        <!-- Dropdown: Visitors -->
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle left-gap" href="#" id="visitorsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            VISITORS
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="visitorsDropdown">
+            <li><a class="dropdown-item" href="visitors.html">VISITORS</a></li>
+            <li><a class="dropdown-item" href="./asset/images/BAKERY AND FOOD TEC EXPO – 2026 FLOOR PLAN.pdf" target="_blank">FLOOR PLAN</a></li>
+            <li><a class="dropdown-item" href="./asset/images/BAKERY AND FOOD TEC EXPO – 2026 PROFILE.pdf" target="_blank">BROCHURE</a></li>
+          </ul>
+        </li> -->
 
-              <li class="nav-item">
-                <a class="nav-link px-3 py-0 white text-uppercase fw-medium" href="index.html">Home</a>
-              </li>
+        <li class="nav-item"><a class="nav-link " href="sponsorship.html">SPONSORSHIP</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">GALLERY</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+      </ul>
+    </div>
 
-              <li class="nav-item">
-                <a class="nav-link active px-3 py-0 white text-uppercase fw-medium" href="about.html">About</a>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle px-3 py-0 white text-uppercase fw-medium" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Exhibitor
-                </a>
-                <ul class="dropdown-menu bg-grey p-0 rounded1 bg-off-white border-0">
-                  <li><a class="dropdown-item py-2 px-7 dark-grey border-0" href="exhibitor.html">Exhibitor</a></li>
-                  <li><a class="dropdown-item py-2 px-7 dark-grey border-0" href="brochure.html">Brochure</a></li>
-                  <li><a class="dropdown-item py-2 px-7 dark-grey border-0" href="floor-plan.html">Floor Plan</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link px-3 py-0 white text-uppercase fw-medium" href="visitor.html">Visitor</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link px-3 py-0 white text-uppercase fw-medium" href="sponsorship.html">Sponsorship</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link px-3 py-0 white text-uppercase fw-medium" href="gallery.html">Gallery</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link px-3 py-0 white text-uppercase fw-medium" href="contact.html">Contact</a>
-              </li>
-
-            </ul>
-          </div>
-        </div>
-
-        <!-- Get a Quote Button -->
-        <div class="col-lg-3 text-end">
-              <a class="ev-btn" href="contact.html">
+    <!-- Right-side Button -->
+    <div class="d-none d-lg-block">
+      <a class="ev-btn" href="contact.html">
   Get a Quote
 
 
@@ -129,40 +133,54 @@
 
  
 </a>
-        </div>
+    </div>
+  </div>
+</nav>
+<!-- Navbar End -->
+ <!-- ===== Offcanvas Menu (Mobile) ===== -->
+<div class="offcanvas offcanvas-end bg-white" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+  <div class="offcanvas-header justify-content-between align-items-center">
+    <!-- Logo -->
+    <a href="index.html" class="navbar-brand m-0">
+      <img src="https://anuja632.github.io/bakeryfoodexpo/asset/images/logo.png" alt="Bakery Expo Logo" style="height: 80px;" loading="lazy">
+    </a>
+    <!-- Close button -->
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
 
-      </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav text-center">
+      <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+      <li class="nav-item"><a class="nav-link active" href="about.html">ABOUT US</a></li>
+      <li class="nav-item"><a class="nav-link" href="exhibitors.html">EXHIBITORS</a></li>
+      <li class="nav-item"><a class="nav-link" href="visitors.html">VISITORS</a></li>
+      <li class="nav-item"><a class="nav-link" href="sponsorship.html">SPONSORSHIP</a></li>
+      <li class="nav-item"><a class="nav-link" href="gallery.html">GALLERY</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+    </ul>
+
+    <div class="text-center mt-4">
+      <a href="contact.html" class="btn-default">REGISTERED</a>
     </div>
   </div>
 </div>
 
-  </header>
-  <!-- Header Section Ends -->
-  
+
   <!-- Banner Section Starts -->
-  <section class="banner breadcrumb mb-0 pt-11 pb-10 position-relative rounded3 rounded-top-0">
-    <div class="overlay rounded3 rounded-top-0"></div>
-    <div class="container position-relative">
-      <div class="banner-inner pt-10 w-lg-75 m-auto text-center text-white ">
-        <div class="section-title mb-2">
-          <h1 class="text-white mb-2">About Us</h1>
-          <ul class="list-unstyled d-flex justify-content-center">
-            <li><a href="index.html">Home</a></li>
-            <li class="mx-4"><i class="fa fa-star" aria-hidden="true"></i></li>
-            <li><a href="">About Us</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="page-header">
+ <img src="https://charger-nuxt.vercel.app/_nuxt/04.vUwzxK2H.jpg" loading="lazy">
+</div>
+ 
   <!-- Banner Section Ends -->
 
 <!-- About Us Section Starts -->
-<section class="about1  pt-10">
+<section class="about1 pt-10">
   <div class="container">
     <div class="about-inner pb-5">
       <div class="row align-items-center gy-5 gx-xl-5">
-        <div class="col-xl-2 col-md-6 order-3 order-xl-1">
+
+        <!-- Counters -->
+        <div class="col-xl-2 col-md-6 order-3 order-xl-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
           <div class="about-counter text-center">
             <div class="counter-box mb-6 pb-6 border-bottom border-1 border-grey1">
               <h2 class="green"><span class="num" data-val="10"></span>+</h2>
@@ -182,53 +200,70 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-4 col-md-6 order-2">
+
+        <!-- Image -->
+        <div class="col-xl-4 col-md-6 order-2" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
           <div class="about-image">
-            <img src="https://htmldesigntemplates.com/html/evdrivex/images/charging-an-electric-or-hybrid-phev-car-with-the-p-2022-01-29-11-17-07-utc.jpg" alt="about image" class="w-100 rounded2">
+            <img src="https://htmldesigntemplates.com/html/evdrivex/images/charging-an-electric-or-hybrid-phev-car-with-the-p-2022-01-29-11-17-07-utc.jpg" 
+                 alt="about image" 
+                 class="w-100 rounded2" 
+                 loading="lazy">
           </div>
         </div>
-        <div class="col-xl-6 order-1 order-xl-3">
+
+        <!-- Text Content -->
+        <div class="col-xl-6 order-1 order-xl-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
           <div class="about-info text-center text-xl-start">
-            <div class="section-title mb-6">
+            <div class="section-title mb-6" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="500">
               <h6 class="text-uppercase fw-medium green1 mb-1">About Auto & EV Expo 2026</h6>
-              <h2 class="ps-4 border-start border-3 border-green">Experience the <span class="green">Future of Mobility</span> Under One Roof!</h2>
+              <h2 class="ps-4 border-start border-3 border-green">
+                Experience the <span class="green">Future of Mobility</span> Under One Roof!
+              </h2>
             </div>
+
             <div class="section-body">
-              <p class="mb-4 pb-4 border-dashed border-top-0 border-2 border-start-0 border-end-0">
+              <p class="mb-4 pb-4 border-dashed border-top-0 border-2 border-start-0 border-end-0" 
+                 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
                 Join us at Auto & EV Expo 2026, where cutting-edge electric vehicles, hybrid technologies, and smart mobility solutions meet. Explore the latest innovations, connect with industry leaders, and witness the future of automotive technology.
               </p>
+
+              <!-- Services -->
               <div class="about-services mb-6">
                 <div class="row g-0">
-                  <div class="col-md-6">
+                  <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
                     <div class="about-service-box p-4 d-flex align-items-center bg-grey rounded2 rounded-bottom-0">
-                      <img src="https://htmldesigntemplates.com/html/evdrivex/images/PNG/car_eco.png" alt="service image" class="me-3">
+                      <img src="https://htmldesigntemplates.com/html/evdrivex/images/PNG/car_eco.png" alt="service image" class="me-3" loading="lazy">
                       <a class="black text-capitalize fw-bold" href="">EV & Hybrid Showcases</a>
                     </div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
                     <div class="about-service-box p-4 d-flex align-items-center bg-white">
-                      <img src="https://htmldesigntemplates.com/html/evdrivex/images/PNG/car_with_flash.png" alt="service image" class="me-3">
+                      <img src="https://htmldesigntemplates.com/html/evdrivex/images/PNG/car_with_flash.png" alt="service image" class="me-3" loading="lazy">
                       <a class="black text-capitalize fw-bold" href="">Fast Charging Demos</a>
                     </div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900">
                     <div class="about-service-box p-4 d-flex align-items-center bg-white">
-                      <img src="https://htmldesigntemplates.com/html/evdrivex/images/PNG/ecology.png" alt="service image" class="me-3">
+                      <img src="https://htmldesigntemplates.com/html/evdrivex/images/PNG/ecology.png" alt="service image" class="me-3" loading="lazy">
                       <a class="black text-capitalize fw-bold" href="">Sustainable Innovations</a>
                     </div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
                     <div class="about-service-box p-4 d-flex align-items-center bg-grey rounded2 rounded-top-0">
-                      <img src="https://htmldesigntemplates.com/html/evdrivex/images/PNG/battery_plug.png" alt="service image" class="me-3">
+                      <img src="https://htmldesigntemplates.com/html/evdrivex/images/PNG/battery_plug.png" alt="service image" class="me-3" loading="lazy">
                       <a class="black text-capitalize fw-bold" href="">Interactive Workshops</a>
                     </div>
                   </div>
                 </div>
               </div>
-              <a href="about.html" class="btn btn2">Learn More</a>
+
+              <!-- Button -->
+              <a href="about.html" class="btn btn2" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="1100">Learn More</a>
+
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </div>
@@ -237,12 +272,13 @@
 
 
 
+
 <!-- Work Section Starts -->
 <section class="work pt-10 pb-8 bg-dark text-center text-white rounded3 rounded-start-0 position-relative">
   <div class="overlay rounded3 rounded-start-0"></div>
   <div class="container position-relative">
     <div class="work-inner">
-      <div class="section-title mb-8">
+      <div class="section-title mb-8" data-aos="fade-down" data-aos-duration="1000">
         <h6 class="text-uppercase fw-medium text-white mb-1">Why choose Auto and EV Expo 2026</h6>
         <h2 class="text-white">India’s Largest <span class="green">Automobile & EV</span> Exhibition</h2>
       </div>
@@ -250,14 +286,18 @@
         <div class="row gy-5 gx-md-5">
 
           <!-- BOX 1 -->
-          <div class="col-xl-3 col-md-6">
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
             <div class="work-box position-relative">
               <div class="work-image mb-5">
-                <img src="https://htmldesigntemplates.com/html/evdrivex/images/modern-electric-car-charging-at-outdoors-ev-statio-2023-03-17-23-18-45-utc.jpg" alt="work image" class="rounded-circle object-fit-cover">
+                <img src="https://htmldesigntemplates.com/html/evdrivex/images/modern-electric-car-charging-at-outdoors-ev-statio-2023-03-17-23-18-45-utc.jpg" 
+                     alt="work image" 
+                     class="rounded-circle object-fit-cover" 
+                     loading="lazy">
               </div>
               <div class="work-info">
                 <h4 class="mb-3 text-white">EV & Auto Innovations</h4>
-<p>Discover advanced vehicles and technologies shaping future mobility trends.</p>              </div>
+                <p>Discover advanced vehicles and technologies shaping future mobility trends.</p>
+              </div>
               <div class="work-box-number p-2 rounded-circle border border-3 border-lightgreen bg-green position-absolute">
                 <h4 class="text-white">01.</h4>
               </div>
@@ -265,15 +305,18 @@
           </div>
 
           <!-- BOX 2 -->
-          <div class="col-xl-3 col-md-6">
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <div class="work-box position-relative my-8">
               <div class="work-image mb-5">
-                <img src="https://htmldesigntemplates.com/html/evdrivex/images/hand-holding-electric-car-charger-electric-vehicl-2022-11-16-14-02-45-utc.jpg" alt="work image" class="rounded-circle object-fit-cover">
+                <img src="https://htmldesigntemplates.com/html/evdrivex/images/hand-holding-electric-car-charger-electric-vehicl-2022-11-16-14-02-45-utc.jpg" 
+                     alt="work image" 
+                     class="rounded-circle object-fit-cover" 
+                     loading="lazy">
               </div>
               <div class="work-info">
                 <h4 class="mb-3 text-white">Live Demos</h4>
-<p>Experience real-time demonstrations of innovative automotive and EV solutions.</p>
-            </div>
+                <p>Experience real-time demonstrations of innovative automotive and EV solutions.</p>
+              </div>
               <div class="work-box-number p-2 rounded-circle border border-3 border-lightgreen bg-green position-absolute">
                 <h4 class="text-white">02.</h4>
               </div>
@@ -281,14 +324,18 @@
           </div>
 
           <!-- BOX 3 -->
-          <div class="col-xl-3 col-md-6">
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
             <div class="work-box position-relative">
               <div class="work-image mb-5">
-                <img src="https://htmldesigntemplates.com/html/evdrivex/images/indian-businessman-charging-car-at-outdoor-ev-stat-2023-03-17-23-18-50-utc.jpg" alt="work image" class="rounded-circle object-fit-cover">
+                <img src="https://htmldesigntemplates.com/html/evdrivex/images/indian-businessman-charging-car-at-outdoor-ev-stat-2023-03-17-23-18-50-utc.jpg" 
+                     alt="work image" 
+                     class="rounded-circle object-fit-cover" 
+                     loading="lazy">
               </div>
               <div class="work-info">
                 <h4 class="mb-3 text-white">Business Networking</h4>
-<p>Connect with industry leaders, manufacturers, investors, and emerging startups.</p>              </div>
+                <p>Connect with industry leaders, manufacturers, investors, and emerging startups.</p>
+              </div>
               <div class="work-box-number p-2 rounded-circle border border-3 border-lightgreen bg-green position-absolute">
                 <h4 class="text-white">03.</h4>
               </div>
@@ -296,14 +343,18 @@
           </div>
 
           <!-- BOX 4 -->
-          <div class="col-xl-3 col-md-6">
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
             <div class="work-box position-relative my-8">
               <div class="work-image mb-5">
-                <img src="https://htmldesigntemplates.com/html/evdrivex/images/electric-car-charging-connected-to-the-grid-2023-02-07-21-01-15-utc.jpg" alt="work image" class="rounded-circle object-fit-cover">
+                <img src="https://htmldesigntemplates.com/html/evdrivex/images/electric-car-charging-connected-to-the-grid-2023-02-07-21-01-15-utc.jpg" 
+                     alt="work image" 
+                     class="rounded-circle object-fit-cover" 
+                     loading="lazy">
               </div>
               <div class="work-info">
                 <h4 class="mb-3 text-white">Workshops</h4>
-<p>Learn from expert sessions covering automotive growth and mobility development.</p>              </div>
+                <p>Learn from expert sessions covering automotive growth and mobility development.</p>
+              </div>
               <div class="work-box-number p-2 rounded-circle border border-3 border-lightgreen bg-green position-absolute">
                 <h4 class="text-white">04.</h4>
               </div>
@@ -316,170 +367,194 @@
   </div>
 </section>
 <!-- Work Section Ends -->
+
+<!-- FAQ Section Starts -->
 <section class="faq py-8">
     <div class="container">
-      <div class="faq-inner text-center text-xl-start">
-        <div class="row align-items-center">
-          <div class="col-xl-7">
-            <div class="section-left">
-              <div class="section-title mb-6 text-center text-xl-start">
-                <h6 class="text-uppercase fw-medium green1 mb-1">Auto & EV Expo 2026</h6>
-                <h2 class="ps-4 border-start border-3 border-green">Frequently Asked <span class="green">Questions</span></h2>
-              </div>
+        <div class="faq-inner text-center text-xl-start">
+            <div class="row align-items-center">
+
+                <!-- Left Column: FAQ Accordion -->
+                <div class="col-xl-7" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="section-left">
+                        <div class="section-title mb-6 text-center text-xl-start" data-aos="fade-down" data-aos-duration="1000">
+                            <h6 class="text-uppercase fw-medium green1 mb-1">Auto & EV Expo 2026</h6>
+                            <h2 class="ps-4 border-start border-3 border-green">Frequently Asked <span class="green">Questions</span></h2>
+                        </div>
+                    </div>
+                    <div class="section-body">
+                        <div class="accordion text-start" id="accordionExample2">
+
+                            <!-- Q1 -->
+                            <div class="accordion-item border-0 mb-4 border-bottom border-2 border-lightgreen">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button h6 fw-bold shadow-none p-0 p-4 m-0 bg-white" 
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseA" aria-expanded="true">
+                                        What is Auto & EV Tech Expo 2026?
+                                    </button>
+                                </h2>
+                                <div id="collapseA" class="accordion-collapse collapse show" data-bs-parent="#accordionExample2">
+                                    <div class="accordion-body pt-0 p-4">
+                                        <p class="grey">
+                                            Auto & EV Tech Expo 2026 is a global showcase of automobiles, electric vehicles, 
+                                            components, batteries, charging solutions, innovations, and future mobility technology 
+                                            under one roof.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Q2 -->
+                            <div class="accordion-item border-0 mb-4 border-bottom border-2 border-lightgreen">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed h6 fw-bold shadow-none p-0 p-4 m-0 bg-white"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseB">
+                                        Who can attend the expo?
+                                    </button>
+                                </h2>
+                                <div id="collapseB" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+                                    <div class="accordion-body pt-0 p-4">
+                                        <p class="grey">
+                                            Manufacturers, distributors, dealers, investors, startups, traders, students, fleet owners, 
+                                            and EV enthusiasts are welcome to join and explore business opportunities.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Q3 -->
+                            <div class="accordion-item border-0 mb-4 border-bottom border-2 border-lightgreen">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed h6 fw-bold shadow-none p-0 p-4 m-0 bg-white"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseC">
+                                        What exhibits can I expect?
+                                    </button>
+                                </h2>
+                                <div id="collapseC" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+                                    <div class="accordion-body pt-0 p-4">
+                                        <p class="grey">
+                                            Visitors can explore EVs, cars, bikes, charging stations, batteries, solar mobility, 
+                                            components, accessories, garage tools, automation systems, and upcoming future-tech models.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Q4 -->
+                            <div class="accordion-item border-0 mb-4 border-bottom border-2 border-lightgreen">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed h6 fw-bold shadow-none p-0 p-4 m-0 bg-white"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseD">
+                                        How can exhibitors participate?
+                                    </button>
+                                </h2>
+                                <div id="collapseD" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+                                    <div class="accordion-body pt-0 p-4">
+                                        <p class="grey">
+                                            Exhibitors can register online, select booth type, submit company details, 
+                                            and confirm participation through our official expo website or organizing team.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>  
+                    </div>
+                </div>
+
+                <!-- Right Column: Image & Quote -->
+                <div class="col-xl-5" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="section-right">
+                        <div class="faq-image text-center">
+                            <img src="https://img.freepik.com/premium-photo/busy-car-dealership-with-crowds-people-looking-purchase-dynamic-scene_1177187-161810.jpg" 
+                                 alt="faq image" class="w-md-60" loading="lazy">
+                        </div>
+                        <div class="faq-qoute p-4 text-white bg-green1 w-md-80 mx-auto rounded2 position-relative" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+                            <ul class="list-unstyled d-flex">
+                                <li class="h2 me-4">
+                                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                                </li>
+                                <li class="h5 fw-normal fst-italic lh-base">
+                                    Discover future mobility. Connect. Innovate. Grow at Auto & EV Tech Expo 2026.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="section-body">
-              <div class="accordion text-start" id="accordionExample2">
-
-                <!-- Q1 -->
-                <div class="accordion-item border-0 mb-4 border-bottom border-2 border-lightgreen">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button h6 fw-bold shadow-none p-0 p-4 m-0 bg-white" 
-                      type="button" data-bs-toggle="collapse" data-bs-target="#collapseA" aria-expanded="false">
-                        What is Auto & EV Tech Expo 2026?
-                    </button>
-                  </h2>
-                  <div id="collapseA" class="accordion-collapse collapse show" data-bs-parent="#accordionExample2">
-                    <div class="accordion-body pt-0 p-4">
-                      <p class="grey">
-                        Auto & EV Tech Expo 2026 is a global showcase of automobiles, electric vehicles, 
-                        components, batteries, charging solutions, innovations, and future mobility technology 
-                        under one roof.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Q2 -->
-                <div class="accordion-item border-0 mb-4 border-bottom border-2 border-lightgreen">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed h6 fw-bold shadow-none p-0 p-4 m-0 bg-white"
-                      type="button" data-bs-toggle="collapse" data-bs-target="#collapseB">
-                        Who can attend the expo?
-                    </button>
-                  </h2>
-                  <div id="collapseB" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
-                    <div class="accordion-body pt-0 p-4">
-                      <p class="grey">
-                        Manufacturers, distributors, dealers, investors, startups, traders, students, fleet owners, 
-                        and EV enthusiasts are welcome to join and explore business opportunities.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Q3 -->
-                <div class="accordion-item border-0 mb-4 border-bottom border-2 border-lightgreen">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed h6 fw-bold shadow-none p-0 p-4 m-0 bg-white"
-                      type="button" data-bs-toggle="collapse" data-bs-target="#collapseC">
-                        What exhibits can I expect?
-                    </button>
-                  </h2>
-                  <div id="collapseC" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
-                    <div class="accordion-body pt-0 p-4">
-                      <p class="grey">
-                        Visitors can explore EVs, cars, bikes, charging stations, batteries, solar mobility, 
-                        components, accessories, garage tools, automation systems, and upcoming future-tech models.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Q4 -->
-                <div class="accordion-item border-0 mb-4 border-bottom border-2 border-lightgreen">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed h6 fw-bold shadow-none p-0 p-4 m-0 bg-white"
-                      type="button" data-bs-toggle="collapse" data-bs-target="#collapseD">
-                        How can exhibitors participate?
-                    </button>
-                  </h2>
-                  <div id="collapseD" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
-                    <div class="accordion-body pt-0 p-4">
-                      <p class="grey">
-                        Exhibitors can register online, select booth type, submit company details, 
-                        and confirm participation through our official expo website or organizing team.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-              </div>  
-            </div>
-          </div>
-
-          <div class="col-xl-5">
-            <div class="section-right">
-              <div class="faq-image text-center">
-                <img src="https://img.freepik.com/premium-photo/busy-car-dealership-with-crowds-people-looking-purchase-dynamic-scene_1177187-161810.jpg" 
-                     alt="faq image" class="w-md-60">
-              </div>
-              <div class="faq-qoute p-4 text-white bg-green1 w-md-80 mx-auto rounded2 position-relative">
-                <ul class="list-unstyled d-flex ">
-                  <li class="h2 me-4">
-                    <i class="fa fa-quote-left" aria-hidden="true"></i>
-                  </li>
-                  <li class="h5 fw-normal fst-italic lh-base">
-                    Discover future mobility. Connect. Innovate. Grow at Auto & EV Tech Expo 2026.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
         </div>
-      </div>
     </div>
 </section>
+<!-- FAQ Section Ends -->
+
 
 <section class="mission py-10">
     <div class="container">
-      <div class="mission-inner text-center text-lg-start border-dashed border-2 mb-7 pb-7 border-top-0 border-start-0 border-end-0">
-        <div class="row align-items-center gy-5 gx-lg-5">
-          <div class="col-lg-6">
-            <div class="section-left">
-              <img src="https://evchargeplus.com/wp-content/uploads/2019/12/EV-shows-evchargeplus-cover.jpg.webp" alt="mission image" class="w-100">
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="section-right">
-              <div class="section-title mb-6">
-               
-                <h2 class="ps-4 border-start border-3 border-green"><span class="green">our mission</span></h2>
-              </div>
-              <div class="section-body">
-                <p>
-To accelerate the evolution of India’s automotive and electric mobility ecosystem by bringing together innovation, intelligent engineering, and sustainable transportation solutions.
-Auto & EV Tech Expo 2026 empowers industries, manufacturers, and technology leaders to drive smarter, cleaner, and future-ready mobility for the nation.                </p>
-                
-              </div>
-            </div>
-          </div>
-        </div>
-               
-      </div>
-      <div class="row align-items-center gy-5 gx-lg-5">
 
-          <div class="col-lg-6">
-            <div class="section-right">
-              <div class="section-title mb-6">
-               
-                <h2 class="ps-4 border-start border-3 border-green"><span class="green">Our Vision</span></h2>
-              </div>
-              <div class="section-body">
-                <p>
-To be recognized as a leading automotive and EV technology expo—showcasing breakthrough mobility innovations, green energy solutions, and next-gen smart technologies that redefine the future of transportation, logistics, and urban mobility.                </p>
-                
-              </div>
+        <!-- Mission Row -->
+        <div class="mission-inner text-center text-lg-start border-dashed border-2 mb-7 pb-7 border-top-0 border-start-0 border-end-0">
+            <div class="row align-items-center gy-5 gx-lg-5">
+
+                <!-- Mission Image -->
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="section-left">
+                        <img src="https://evchargeplus.com/wp-content/uploads/2019/12/EV-shows-evchargeplus-cover.jpg.webp" 
+                             alt="mission image" class="w-100 rounded2" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Mission Text -->
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="section-right">
+                        <div class="section-title mb-6">
+                            <h2 class="ps-4 border-start border-3 border-green">
+                                <span class="green">Our Mission</span>
+                            </h2>
+                        </div>
+                        <div class="section-body">
+                            <p>
+                                To accelerate the evolution of India’s automotive and electric mobility ecosystem by bringing together innovation, intelligent engineering, and sustainable transportation solutions. 
+                                Auto & EV Tech Expo 2026 empowers industries, manufacturers, and technology leaders to drive smarter, cleaner, and future-ready mobility for the nation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-          </div>
-                    <div class="col-lg-6">
-            <div class="section-left">
-              <img src="https://evchargeplus.com/wp-content/uploads/2019/12/geneva-motor-show-evchargeplus.jpg" alt="mission image" class="w-100">
+        </div>
+
+        <!-- Vision Row -->
+        <div class="row align-items-center gy-5 gx-lg-5">
+
+            <!-- Vision Text -->
+            <div class="col-lg-6 order-lg-1" data-aos="fade-right" data-aos-duration="1000">
+                <div class="section-right">
+                    <div class="section-title mb-6">
+                        <h2 class="ps-4 border-start border-3 border-green">
+                            <span class="green">Our Vision</span>
+                        </h2>
+                    </div>
+                    <div class="section-body">
+                        <p>
+                            To be recognized as a leading automotive and EV technology expo—showcasing breakthrough mobility innovations, green energy solutions, and next-gen smart technologies that redefine the future of transportation, logistics, and urban mobility.
+                        </p>
+                    </div>
+                </div>
             </div>
-          </div>
+
+            <!-- Vision Image -->
+            <div class="col-lg-6 order-lg-2" data-aos="fade-left" data-aos-duration="1000">
+                <div class="section-left">
+                    <img src="https://evchargeplus.com/wp-content/uploads/2019/12/geneva-motor-show-evchargeplus.jpg" 
+                         alt="vision image" class="w-100 rounded2" loading="lazy">
+                </div>
+            </div>
+
         </div>
     </div>
-  </section>
+</section>
+
 <!-- ================= Stats Section (Auto & EV Expo 2026) ================= -->
 <section id="expo-stats" class="expo-stats mb-6">
   <div class="stats-inner container">
@@ -533,188 +608,28 @@ To be recognized as a leading automotive and EV technology expo—showcasing bre
   </div>
 </section>
 
-<!-- ================= Styles ================= -->
-<style>
-  :root{
-    --bg: #0B2E13;         /* deep green background */
-    --accent: #87C332;     /* eco highlight */
-    --white: #ffffff;
-    --gold: #F4B400;       /* premium highlight (optional) */
-    --muted: rgba(255,255,255,0.85);
-    --card-bg: rgba(0,0,0,0.45); /* dark overlay for cards */
-    --radius: 12px;
-    --gap: 1.25rem;
-  }
-
- 
-  /* Section */
-  .expo-stats{
-    position: relative;
-    color: var(--muted);
-    padding: 4.5rem 0;
-    background-image: url('https://htmldesigntemplates.com/html/evdrivex/images/rearview-car-parked-in-luxury-showroom-car-dealer-2023-03-30-01-57-28-utc.JPG');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 1;
-  }
-
-  /* Overlay for readability */
-  .expo-stats::before{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.55); /* dark overlay */
-    z-index: -1;
-  }
-
-  .stats-inner{ text-align:center; }
-
-  .stats-title{
-    color: var(--white);
-    font-size: 1.6rem;
-    margin: 0 0 .25rem;
-    font-weight: 700;
-    letter-spacing: .2px;
-  }
-
-  .stats-sub{
-    margin: 0 0 1.6rem;
-    color: rgba(255,255,255,0.78);
-    font-size: .95rem;
-  }
-
-  /* Grid */
-  .stats-grid{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--gap);
-    margin-top: 1.25rem;
-    align-items: stretch;
-  }
-
-  .stat{
-    background: var(--card-bg);
-    backdrop-filter: blur(4px);
-    border: 1px solid rgba(255,255,255,0.08);
-    padding: 1.2rem 1rem;
-    border-radius: var(--radius);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 120px;
-    transition: transform .28s ease, box-shadow .28s ease;
-  }
-
-  .stat:hover{
-    transform: translateY(-6px);
-    box-shadow: 0 14px 40px rgba(0,0,0,0.55);
-  }
-
-  .stat-number{
-    font-size: clamp(1.4rem, 2.6vw, 2.4rem);
-    font-weight: 800;
-    color: var(--white);
-    line-height: 1;
-    margin-bottom: .4rem;
-    letter-spacing: -0.02em;
-  }
-
-  .stat-label{
-    font-size: .92rem;
-    color: rgba(255,255,255,0.85);
-    font-weight: 600;
-    text-align: center;
-  }
-
-  .stat-label::after{
-    content: "";
-    display: block;
-    width: 36px;
-    height: 4px;
-    border-radius: 4px;
-    margin: 8px auto 0;
-    background: linear-gradient(90deg, var(--accent), var(--gold));
-    opacity: .95;
-  }
-
-  /* Responsive */
-  @media (max-width: 992px){
-    .stats-grid{ grid-template-columns: repeat(2, 1fr); }
-  }
-
-  @media (max-width: 520px){
-    .stats-grid{ grid-template-columns: 1fr; }
-    .stats-inner{ padding: 0 1rem; }
-    .stat{ min-height: 100px; padding: 1rem; }
-    .stat-number{ font-size: 1.6rem; }
-  }
-
-  /* Reduce motion */
-  @media (prefers-reduced-motion: reduce){
-    .stat, .stat:hover{
-      transform: none;
-      transition: none;
-    }
-  }
-</style>
 
 
-<!-- ================= Script (counter animation) ================= -->
-<script>
-  (function(){
-    // Helper: format with commas
-    function numberWithCommas(x){
-      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    }
-
-    const stats = document.querySelectorAll('.stat-number');
-    let started = false;
-
-    if('IntersectionObserver' in window && stats.length){
-      const io = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if(entry.isIntersecting){
-            const el = entry.target;
-            if(el.getAttribute('data-started')) return;
-            el.setAttribute('data-started', 'true');
-            const target = parseInt(el.dataset.target, 10) || 0;
-            const duration = 1600; // ms
-            const frameRate = 50; // ms
-            const totalFrames = Math.round(duration / frameRate);
-            let frame = 0;
-            const isLarge = target > 999;
-            const step = target / totalFrames;
-
-            const counter = setInterval(() => {
-              frame++;
-              const current = Math.min(Math.round(step * frame), target);
-              el.textContent = isLarge ? numberWithCommas(current) : current;
-              if(frame >= totalFrames){
-                el.textContent = isLarge ? numberWithCommas(target) : target;
-                clearInterval(counter);
-              }
-            }, frameRate);
-
-            // optionally unobserve
-            observer.unobserve(el);
-          }
-        });
-      }, { threshold: 0.45 });
-
-      stats.forEach(s => io.observe(s));
-    } else {
-      // fallback: instantly fill
-      stats.forEach(el => {
-        const target = parseInt(el.dataset.target, 10) || 0;
-        el.textContent = target.toLocaleString();
-      });
-    }
-  })();
-</script>
+<!-- Floating Action Buttons -->
+<div class="floating-buttons">
+<a href="https://wa.me/917406213220?text=Hello%21%20Don%E2%80%99t%20miss%20the%20biggest%20Auto%20%26%20EV%20Expo%202026.%20Premium%20stalls%2C%20massive%20footfall%20%26%20top%20industry%20buyers%21%20Shall%20I%20share%20full%20details%3F" 
+   class="fab-btn whatsapp" 
+   target="_blank">
+   <i class="fab fa-whatsapp"></i>
+</a>
 
 
+  <!-- Phone -->
+  <a href="tel:+917406213220" class="fab-btn phone" aria-label="Call Us">
+    <i class="fas fa-phone"></i>
+  </a>
+
+<!-- Scroll To Top -->
+<button class="fab-btn bg-green" id="scrollTopBtn" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+</div>
 <!-- ================= Footer Section Starts ================= -->
 <footer class="rounded3 rounded-bottom-0 pt-10 pb-6 bg-dark text-white">
   <div class="container">
@@ -725,10 +640,10 @@ To be recognized as a leading automotive and EV technology expo—showcasing bre
         <div class="row gx-md-5 gy-5">
 
           <!-- Logo & Description -->
-          <div class="col-xl-4">
+          <div class="col-xl-4 col-md-6" data-aos="fade-up">
             <div class="footer-info">
               <div class="footer-logo mb-2">
-                <img src="images/ev-logo-04.png" alt="Auto & EV Expo 2026 Logo" class="w-60">
+                <img src="images/ev-logo-04.png" alt="Auto & EV Expo 2026 Logo" class="w-60" loading="lazy">
               </div>
               <div class="footer-info-inner mb-4">
                 <p>Join us at Auto & EV Tech Expo 2026 to explore cutting-edge electric vehicles, smart mobility solutions, and innovative automotive technologies.</p>
@@ -753,7 +668,7 @@ To be recognized as a leading automotive and EV technology expo—showcasing bre
           </div>
 
           <!-- Quick Links -->
-          <div class="col-xl-2 col-md-6">
+          <div class="col-xl-2 col-md-6" data-aos="fade-up">
             <div class="quick-links">
               <h3 class="text-white mb-2">Quick Links</h3>
               <div class="seperator w-25 border-bottom border-1 border-white mb-6 ms-xl-1 m-auto"></div>
@@ -769,15 +684,13 @@ To be recognized as a leading automotive and EV technology expo—showcasing bre
             </div>
           </div>
 
-
-
           <!-- Contact Info -->
-          <div class="col-xl-4">
+          <div class="col-xl-4 col-md-6" data-aos="fade-up">
             <div class="footer-contact">
               <h3 class="text-white mb-2">Contact Info</h3>
               <div class="seperator w-25 border-bottom border-1 border-white mb-6 ms-xl-1 m-auto"></div>
               <ul class="list-unstyled">
-                <li class="mb-2"><i class="fa fa-map-marker me-2" aria-hidden="true"></i> Hills Exhibition Centre, Hosur, Tamil Nadu, India</li>
+                <li class="mb-2"><i class="fa fa-map-marker me-2"></i> Hills Exhibition Centre, Hosur, Tamil Nadu, India</li>
                 <li class="mb-2"><a href="tel:+917406213220"><i class="fa fa-phone me-2"></i>+91 74062 13220</a></li>
                 <li class="mb-2"><a href="tel:+917406213221"><i class="fa fa-phone me-2"></i>+91 74062 13221</a></li>
                 <li class="mb-2"><a href="tel:+917406213222"><i class="fa fa-phone me-2"></i>+91 74062 13222</a></li>
@@ -786,47 +699,33 @@ To be recognized as a leading automotive and EV technology expo—showcasing bre
               </ul>
             </div>
           </div>
-         <!-- Features Links (Expo Dates with Icon) -->
-          <div class="col-xl-2 col-md-6">
+
+          <!-- Expo Dates -->
+          <div class="col-xl-2 col-md-6" data-aos="fade-up">
             <div class="quick-links">
               <h3 class="text-white mb-2">Expo Dates</h3>
               <div class="seperator w-25 border-bottom border-1 border-white mb-6 ms-xl-1 m-auto"></div>
               <ul class="list-unstyled">
-                <li class="mb-4">
-                  <i class="fa fa-calendar-alt me-2"></i>
-                  <a href="#">Nov 20, 2026</a>
-                </li>
-                <li class="mb-4">
-                  <i class="fa fa-calendar-alt me-2"></i>
-                  <a href="#">Nov 21, 2026</a>
-                </li>
-                <li class="mb-4">
-                  <i class="fa fa-calendar-alt me-2"></i>
-                  <a href="#">Nov 22, 2026</a>
-                </li>
+                <li class="mb-4"><i class="fa fa-calendar-alt me-2"></i><a href="#">Nov 20, 2026</a></li>
+                <li class="mb-4"><i class="fa fa-calendar-alt me-2"></i><a href="#">Nov 21, 2026</a></li>
+                <li class="mb-4"><i class="fa fa-calendar-alt me-2"></i><a href="#">Nov 22, 2026</a></li>
               </ul>
             </div>
           </div>
 
         </div>
-
       </div>
-        <!-- Footer Logo Bottom -->
-        <div class="text-center mt-6">
-          <img src="https://jayasurya1912.github.io/buildexpo/images/fotin.png" alt="Footer Bottom Logo" class="img-fluid" style="max-height:75px;">
-        </div>
+
+      <!-- Footer Logo Bottom -->
+      <div class="text-center mt-6" data-aos="fade-up">
+        <img src="https://jayasurya1912.github.io/buildexpo/images/fotin.png" alt="Footer Bottom Logo" class="img-fluid" style="max-height:75px;" loading="lazy">
+      </div>
+
       <!-- Copyright -->
-      <div class="copyright px-6 py-4 rounded2 text-center position-relative mt-6">
+      <div class="copyright px-6 py-4 rounded2 text-center position-relative mt-6" data-aos="fade-up">
         <div class="overlay bg-white rounded2"></div>
         <div class="copyright-inner position-relative">
-          <div class="row gy-4">
-
-            <div class="text-center">
-<p class="small mb-0">
-  &copy; 2026 Auto & EV Tech Expo. All Rights Reserved. Developed by <a href="https://techmayon.com" target="_blank" class="text-white text-decoration-underline">Tech Mayon</a>
-</p>
-            </div>
-          </div>
+          <p class="small mb-0">&copy; 2026 Auto & EV Tech Expo. All Rights Reserved. Developed by <a href="https://techmayon.com" target="_blank" class="text-white text-decoration-underline">Tech Mayon</a></p>
         </div>
       </div>
 
@@ -838,21 +737,33 @@ To be recognized as a leading automotive and EV technology expo—showcasing bre
 
 
 
-  <!--Back-to-top Button start-->
-  <div id="back-to-top">
-    <a href="#" class="bg-green position-relative align-items-center rounded-circle d-block border border-4 border-grey"></a>
-  </div>
-  <!--Bacl-to-top Button end-->
-  <!-- Scripts -->
-  <script src="./assets/js/jquery-3.7.1.min.js"></script>
-  <script src="./assets/js/bootstrap.bundle.min.js"></script>
-  <script src="./assets/js/plugin.js"></script>
-  <script src="./assets/js/main.js"></script>
-  <script src="./assets/js/custom.js"></script>
+
+
+<!-- Scripts -->
+<script src="./assets/js/jquery-3.7.1.min.js"></script>
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/plugin.js"></script>
+<script src="./assets/js/main.js"></script>
+<script src="./assets/js/custom.js"></script>
+<!-- Bootstrap bundle (includes Popper) - only one copy -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- jQuery (one copy) - required by OwlCarousel -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Owl Carousel JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
- 
+<!-- AOS Script -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 1000,     // fast animation
+    once: false,       // repeat when entering viewport
+    mirror: true,      // animate on scroll up also
+
+  });
+</script>
 
 </body>
-
 </html>
